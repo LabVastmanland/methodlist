@@ -1,15 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
   <head>
     <meta charset="utf-8">
     <title>Analyslista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
     <link rel="stylesheet" href="styles.css" media="screen" charset="utf-8">
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    <p>
-      asdfa sdf skj fdsflkj .
-    </p>
+  <body ng-app="MethodApp" ng-cloak>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+    <script type="text/javascript" src="methods.js"></script>
     <script type="text/javascript" src="main.js"></script>
+
+
+    <!-- The actual website -->
+    <div ng-controller="MethodController as ctrl" layout="column">
+      <md-content class="md-padding">
+        <h1>Metodförteckning</h1>
+
+        <form ng-submit="$event.preventDefault()">
+          <p>Sök efter provtagningsanvisningar.</p>
+
+          <md-autocomplete
+              md-selected-item="ctrl.selectedItem"
+              md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+              md-search-text="ctrl.searchText"
+              md-selected-item-change="ctrl.selectedItemChange(item)"
+              md-items="item in ctrl.querySearch(ctrl.searchText)"
+              md-item-text="item.component"
+              md-min-length="0"
+              placeholder="Komponent">
+
+            <md-item-template>
+              <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.component}}</span>
+            </md-item-template>
+
+            <md-not-found>
+              "{{ctrl.searchText}}" hittades inte.
+            </md-not-found>
+          </md-autocomplete>
+        </form>
+      </md-content>
+
+      <div class="method">
+        <h2>Metod</h2>
+          <p>Komponent: {{ctrl.selectedItem.component}}</p>
+          <p>Alternativt namn: {{ctrl.selectedItem.alternativeName.join(', ')}}</p>
+          <p>System: {{ctrl.selectedItem.system}}</p>
+          <p>Provtagning: {{ctrl.selectedItem.sample}}</p>
+          <p>Övrigt: {{ctrl.selectedItem.comment}}</p>
+          <p>Laboratoriet tillhanda: {{ctrl.selectedItem.toLabWithin}}</p>
+          <p>Hantering: {{ctrl.selectedItem.handling}}</p>
+          <p>Förvaring och Transport: {{ctrl.selectedItem.storage}}</p>
+          <p>Skickas till: {{ctrl.selectedItem.destination}}</p>
+          <p>Informationskälla: {{ctrl.selectedItem.source}}</p>
+          <p>Uppdaterad: {{ctrl.selectedItem.updated}}</p>
+          <p>Uppdaterad av: {{ctrl.selectedItem.updatedBy}}</p>
+      </div>
+
+    </div>
   </body>
 </html>
