@@ -23,50 +23,113 @@
 
 
     <!-- The actual website -->
-    <div ng-controller="MethodController as ctrl" layout="column">
-      <md-content class="md-padding">
-        <h1>Metodförteckning</h1>
+    <div ng-controller="MethodController as ctrl">
+      <md-content>
 
-        <form ng-submit="$event.preventDefault()">
-          <p>Sök efter provtagningsanvisningar.</p>
+        <div class="header container">
+          <h1>Provtagningsanvisningar</h1>
+          <img src="http://www.ltv.se/images/landstinget-vastmanland.png" alt="" />
+        </div>
 
-          <md-autocomplete
-              md-selected-item="ctrl.selectedItem"
-              md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
-              md-search-text="ctrl.searchText"
-              md-selected-item-change="ctrl.selectedItemChange(item)"
-              md-items="item in ctrl.querySearch(ctrl.searchText)"
-              md-item-text="item.component"
-              md-min-length="0"
-              placeholder="Komponent">
+        <div class="subheader">
+          <a href="#" class="md-raised md-primary md-button">Vårdpersonal</a>
+          <a href="#" class="md-raised md-primary md-button">Laboratoriepersonal</a>
 
-            <md-item-template>
-              <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.component}}</span>
-            </md-item-template>
+          <form ng-submit="$event.preventDefault()">
+            <p>Sök efter provtagningsanvisningar.</p>
 
-            <md-not-found>
-              "{{ctrl.searchText}}" hittades inte.
-            </md-not-found>
-          </md-autocomplete>
-        </form>
+            <md-autocomplete
+                md-selected-item="ctrl.selectedItem"
+                md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+                md-search-text="ctrl.searchText"
+                md-selected-item-change="ctrl.selectedItemChange(item)"
+                md-items="item in ctrl.querySearch(ctrl.searchText)"
+                md-item-text="item.component"
+                md-min-length="0"
+                placeholder="Komponent">
+
+              <md-item-template>
+                <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.component}}, {{item.system}}</span>
+              </md-item-template>
+
+              <md-not-found>
+                "{{ctrl.searchText}}" hittades inte.
+              </md-not-found>
+            </md-autocomplete>
+          </form>
+        </div>
+
+
+        <div class="method" ng-if="ctrl.selectedItem">
+          <div class="titleRow">
+            <h2>{{ctrl.selectedItem.component}}, {{ctrl.selectedItem.system}}</h2>
+            <h3>{{ctrl.selectedItem.speciality}}</h3>
+          </div>
+
+          <table>
+            <tr ng-if="ctrl.selectedItem.alternativeNames.length">
+              <td class="label">Alternativa sökord:</td>
+              <td>
+                <ul>
+                  <li ng-repeat="alt in ctrl.selectedItem.alternativeNames">{{alt}}</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr ng-if="ctrl.selectedItem.sample">
+              <td class="label">Provtagning:</td>
+              <td> {{ctrl.selectedItem.sample}} </td>
+            </tr>
+
+            <tr ng-if="ctrl.selectedItem.comment">
+              <td class="label">Övrigt:</td>
+              <td> {{ctrl.selectedItem.comment}} </td>
+            </tr>
+
+            <tr ng-if="ctrl.selectedItem.toLabWithin">
+              <td class="label">Laboratoriet tillhanda:</td>
+              <td> {{ctrl.selectedItem.toLabWithin}} </td>
+            </tr>
+
+            <tr ng-if="ctrl.selectedItem.handling">
+              <td class="label">Provhantering:</td>
+              <td> {{ctrl.selectedItem.handling}} </td>
+            </tr>
+
+            <tr ng-if="ctrl.selectedItem.storage">
+              <td class="label">Förvaring och transport:</td>
+              <td> {{ctrl.selectedItem.storage}} </td>
+            </tr>
+
+            <tr ng-if="ctrl.selectedItem.destination">
+              <td class="label">Skickas till:</td>
+              <td> {{ctrl.selectedItem.destination}} </td>
+            </tr>
+
+            <tr ng-if="ctrl.selectedItem.source">
+              <td class="label">Informationskälla:</td>
+              <td> <a href="{{ctrl.selectedItem.source}}">{{ctrl.selectedItem.source}}</a> </td>
+            </tr>
+
+            <tr ng-if="ctrl.selectedItem.updated">
+              <td class="label">Uppdaterad:</td>
+              <td> {{ctrl.selectedItem.updated}} av {{ctrl.selectedItem.updatedBy}}</td>
+            </tr>
+
+          </table>
+        </div>
+
+        <ul ng-if="!ctrl.selectedItem">
+          <li ng-repeat="method in ctrl.querySearch()">
+            <a ng-click="ctrl.selectedItem = method">{{method.component}}, {{method.system}}</a>
+          </li>
+        </ul>
+
+        <div class="footer container">
+          Made by: Gustav Sobel and Daniel Ström.
+        </div>
+
       </md-content>
-
-      <div class="method">
-        <h2>Metod</h2>
-          <p>Komponent: {{ctrl.selectedItem.component}}</p>
-          <p>Alternativt namn: {{ctrl.selectedItem.alternativeName.join(', ')}}</p>
-          <p>System: {{ctrl.selectedItem.system}}</p>
-          <p>Provtagning: {{ctrl.selectedItem.sample}}</p>
-          <p>Övrigt: {{ctrl.selectedItem.comment}}</p>
-          <p>Laboratoriet tillhanda: {{ctrl.selectedItem.toLabWithin}}</p>
-          <p>Hantering: {{ctrl.selectedItem.handling}}</p>
-          <p>Förvaring och Transport: {{ctrl.selectedItem.storage}}</p>
-          <p>Skickas till: {{ctrl.selectedItem.destination}}</p>
-          <p>Informationskälla: {{ctrl.selectedItem.source}}</p>
-          <p>Uppdaterad: {{ctrl.selectedItem.updated}}</p>
-          <p>Uppdaterad av: {{ctrl.selectedItem.updatedBy}}</p>
-      </div>
-
     </div>
   </body>
 </html>

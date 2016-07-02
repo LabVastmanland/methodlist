@@ -1,6 +1,10 @@
 var app = angular.module("MethodApp", ['ngMaterial']);
 
 app.controller("MethodController", function($scope) {
+    this.select = function (method) {
+      this.selectedItem = method;
+
+    }
     this.querySearch = function (text) {
       if (!text) {
         return methods;
