@@ -60,7 +60,7 @@
                 </md-not-found>
               </md-autocomplete>
 
-              <input class="md-primary md-button md-raised" type="submit" name="name" value="Sök">
+              <!-- <input class="md-primary md-button md-raised" type="submit" name="name" value="Sök"> -->
             </div>
           </form>
         </div>
@@ -69,14 +69,14 @@
         <div class="method" ng-if="ctrl.selectedItem">
           <div class="titleRow">
             <h2>{{ctrl.selectedItem.component}}, {{ctrl.selectedItem.system}}</h2>
-            <h3>{{ctrl.selectedItem.speciality}}</h3>
+            <h3>{{ctrl.selectedItem.classification}}</h3>
           </div>
 
           <table>
             <tr ng-if="ctrl.selectedItem.alternativeNames.length">
               <td class="label">Alternativa sökord:</td>
               <td>
-                <ul>
+                <ul class="tableList">
                   <li ng-repeat="alt in ctrl.selectedItem.alternativeNames">{{alt}}</li>
                 </ul>
               </td>
@@ -125,14 +125,15 @@
           </table>
         </div>
 
-        <ul ng-if="!ctrl.selectedItem">
+        <ul class="methodList" ng-if="!ctrl.selectedItem">
           <li ng-repeat="method in methods">
             <a ng-click="ctrl.selectedItem = method">{{method.component}}, {{method.system}}</a>
           </li>
         </ul>
 
         <div class="footer container">
-          Made by: Gustav Sobel and Daniel Ström.
+          Skapad av <br />
+          Gustav Sobel & Daniel Ström.
         </div>
 
       </md-content>

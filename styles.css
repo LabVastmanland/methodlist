@@ -1,11 +1,19 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+  font-size: 18px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+body {
+  background: #0aaf8a;
+}
+
+md-content {
+  background: white;
+}
 
 .header {
   background: #0aaf8a;
@@ -14,6 +22,7 @@ html {
   display: flex;
   justify-content: space-between;
   border-bottom: 6px solid #199379;
+  width: 100%;
 }
 
 .header h1 {
@@ -27,6 +36,12 @@ html {
 
 .container {
   padding: 20px 40px;
+}
+
+md-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .subheader {
@@ -50,6 +65,7 @@ html {
 .method .titleRow {
   display: flex;
   justify-content: space-between;
+  max-width: 900px;
 }
 
 .method h3 {
@@ -58,8 +74,7 @@ html {
 
 td {
   vertical-align: top;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 15px;
 }
 
 td.label {
@@ -79,6 +94,9 @@ tr:nth-child(odd) {
 .footer {
   background: #0aaf8a;
   color: white;
+  text-align: right;
+  border-top: 6px solid #199379;
+  width: 100%;
 }
 
 .search {
@@ -97,4 +115,11 @@ tr:nth-child(odd) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
       box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12) !important;
+}
+
+.methodList {
+  padding-left: 45px;
+  padding-right: 45px;
+  list-style: none;
+  align-self: flex-start;
 }
