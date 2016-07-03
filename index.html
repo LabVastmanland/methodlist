@@ -45,12 +45,10 @@
             <div class="search">
               <md-autocomplete
                   md-selected-item="ctrl.selectedItem"
-                  md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
                   md-search-text="ctrl.searchText"
-                  md-selected-item-change="ctrl.selectedItemChange(item)"
                   md-items="item in ctrl.querySearch(ctrl.searchText)"
                   md-item-text="item.component"
-                  md-min-length="0"
+                  md-min-length="1"
                   placeholder="Sök efter provtagningsanvisningar">
 
                 <md-item-template>
@@ -128,7 +126,7 @@
         </div>
 
         <ul ng-if="!ctrl.selectedItem">
-          <li ng-repeat="method in ctrl.querySearch()">
+          <li ng-repeat="method in methods">
             <a ng-click="ctrl.selectedItem = method">{{method.component}}, {{method.system}}</a>
           </li>
         </ul>
