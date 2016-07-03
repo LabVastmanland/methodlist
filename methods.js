@@ -1,6 +1,6 @@
 var methods = [
   {
-    component: 'ACE (serum)',
+    component: 'ACE',
     alternativeNames: ['Angiotensin converting enzyme'],
     system: 'S-',
     speciality: 'Klinisk Kemi',
