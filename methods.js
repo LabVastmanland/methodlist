@@ -7229,27 +7229,6 @@ var methods = [
   },
   {
     "component": "Lipas",
-    "alternativeNames": [],
-    "system": null,
-    "classification": null,
-    "tube": null,
-    "sample": null,
-    "comment": null,
-    "referral": {
-      "text": null,
-      "url": null,
-      "notes": [],
-      "deliveredWithin": null
-    },
-    "handling": null,
-    "storage": null,
-    "destination": null,
-    "source": null,
-    "updatedAt": null,
-    "updatedBy": "Sign."
-  },
-  {
-    "component": "Lipoprotein (a)",
     "alternativeNames": [
       "Amylas"
     ],
@@ -7272,7 +7251,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Lipoproteinfraktioner",
+    "component": "Lipoprotein (a)",
     "alternativeNames": [
       "Lp(a)"
     ],
@@ -7295,7 +7274,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Lupusantikoagulans",
+    "component": "Lipoproteinfraktioner",
     "alternativeNames": [],
     "system": "fS-",
     "classification": "Pärmen",
@@ -7318,7 +7297,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Lymfocyter, T",
+    "component": "Lupusantikoagulans",
     "alternativeNames": [
       "Lupusinhibitor"
     ],
@@ -7341,7 +7320,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Lysosomala enzymer",
+    "component": "Lymfocyter, T",
     "alternativeNames": [],
     "system": "B-",
     "classification": "Centuri",
@@ -7364,7 +7343,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Lysozym",
+    "component": "Lysosomala enzymer",
     "alternativeNames": [],
     "system": null,
     "classification": null,
@@ -7387,7 +7366,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Lysozym i Urin",
+    "component": "Lysozym",
     "alternativeNames": [],
     "system": "S-",
     "classification": "Pärmen",
@@ -7410,7 +7389,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Läkemedel i Urin",
+    "component": "Lysozym i Urin",
     "alternativeNames": [],
     "system": "U-",
     "classification": "Pärmen",
@@ -7431,7 +7410,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Läkemedelsmetaboliserande enzym, genotyp",
+    "component": "Läkemedel i Urin",
     "alternativeNames": [
       "Dextrometorfan",
       "Dihydrokodein",
@@ -7475,7 +7454,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "MAG-ak",
+    "component": "Läkemedelsmetaboliserande enzym, genotyp",
     "alternativeNames": [
       "Debrisokin-test",
       "Cytokrom P450 2C19 = CYP2C19",
@@ -7503,7 +7482,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Makroprolaktin",
+    "component": "MAG-ak",
     "alternativeNames": [
       "Myelinassocierat glykoprotein-antikroppar"
     ],
@@ -7526,7 +7505,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Mangan",
+    "component": "Makroprolaktin",
     "alternativeNames": [
       "Prolaktin",
       "PRL"
@@ -7550,7 +7529,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "MCAD",
+    "component": "Mangan",
     "alternativeNames": [],
     "system": "B-/S-/U-",
     "classification": "Centuri",
@@ -7571,7 +7550,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "MCH (Hemoglobin)",
+    "component": "MCAD",
     "alternativeNames": [
       "MCAD-brist",
       "medium-chain acyl-CoA dehydrogenas"
@@ -7597,7 +7576,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Melatonin i Saliv",
+    "component": "MCH (Hemoglobin)",
     "alternativeNames": [
       "Retikulocythemoglobin ekvivalent",
       "hypokroma retikulocyter"
@@ -7623,7 +7602,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Membranproteiner, Ery",
+    "component": "Melatonin i Saliv",
     "alternativeNames": [],
     "system": "Saliv-",
     "classification": "Pärmen",
@@ -7644,7 +7623,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Meropenem",
+    "component": "Membranproteiner, Ery",
     "alternativeNames": [
       "Ankyrin",
       "Spektrin",
@@ -7670,7 +7649,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Metabol utredning (plasma)",
+    "component": "Meropenem",
     "alternativeNames": [
       "Meronem"
     ],
@@ -7701,7 +7680,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Metabol utredning (urin)",
+    "component": "Metabol utredning (plasma)",
     "alternativeNames": [
       "Metabolisk screening",
       "organiska syror",
@@ -7729,7 +7708,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Metadon",
+    "component": "Metabol utredning (urin)",
     "alternativeNames": [
       "Metabolisk screening",
       "organiska syror",
@@ -7756,7 +7735,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Metanol",
+    "component": "Metadon",
     "alternativeNames": [],
     "system": "P-/S-",
     "classification": "LabMaster",
@@ -7785,7 +7764,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Metformin",
+    "component": "Metanol",
     "alternativeNames": [],
     "system": "S-",
     "classification": "LabMaster",
@@ -7806,7 +7785,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Metoxikatekolaminer",
+    "component": "Metformin",
     "alternativeNames": [],
     "system": "S-",
     "classification": "LabMaster",
@@ -7827,7 +7806,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Metylfenidat",
+    "component": "Metoxikatekolaminer",
     "alternativeNames": [
       "Normetanefrin",
       "Metanefrin",
@@ -7856,7 +7835,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Mianserin",
+    "component": "Metylfenidat",
     "alternativeNames": [
       "Concerta",
       "Equasym",
@@ -7891,7 +7870,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Minimal residual disease",
+    "component": "Mianserin",
     "alternativeNames": [
       "Desmetylmianserin"
     ],
@@ -7914,7 +7893,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Mirtazapin",
+    "component": "Minimal residual disease",
     "alternativeNames": [
       "MRD"
     ],
@@ -7937,7 +7916,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Mixingtest",
+    "component": "Mirtazapin",
     "alternativeNames": [],
     "system": "P-/S-",
     "classification": "LabMaster",
@@ -7965,7 +7944,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "MODY-genotyp, DNA",
+    "component": "Mixingtest",
     "alternativeNames": [],
     "system": null,
     "classification": "Centuri",
@@ -7986,7 +7965,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Moklobemid",
+    "component": "MODY-genotyp, DNA",
     "alternativeNames": [],
     "system": "B-",
     "classification": "Pärmen",
@@ -8007,7 +7986,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Monoaminer i liquor",
+    "component": "Moklobemid",
     "alternativeNames": [],
     "system": "B-",
     "classification": "Centuri",
@@ -8037,7 +8016,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Morfin",
+    "component": "Monoaminer i liquor",
     "alternativeNames": [
       "Monoaminmetaboliter",
       "Csv-HVA",
@@ -8066,7 +8045,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "MTHFR, genotyp",
+    "component": "Morfin",
     "alternativeNames": [],
     "system": "P-/S-",
     "classification": "LabMaster",
@@ -8095,7 +8074,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Multipel endokrin neoplasi",
+    "component": "MTHFR, genotyp",
     "alternativeNames": [
       "Metylentetrahydrofolatreduktas",
       "genotyp"
@@ -8121,7 +8100,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Muskelspecifikt tyrosinkinas-ak",
+    "component": "Multipel endokrin neoplasi",
     "alternativeNames": [
       "MEN1",
       "MEN2",
@@ -8147,7 +8126,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Myastenia gravis",
+    "component": "Muskelspecifikt tyrosinkinas-ak",
     "alternativeNames": [
       "IgG",
       "MuSK-ak",
@@ -8173,7 +8152,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Mykofenolsyra på Karolinska",
+    "component": "Myastenia gravis",
     "alternativeNames": [],
     "system": "S-",
     "classification": "Pärmen",
@@ -8194,7 +8173,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Mykofenolsyra på SU",
+    "component": "Mykofenolsyra på Karolinska",
     "alternativeNames": [
       "MPA-konc",
       "MMF",
@@ -8231,7 +8210,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Mykofenolsyra på UAS",
+    "component": "Mykofenolsyra på SU",
     "alternativeNames": [
       "MPA-konc",
       "CellCept"
@@ -8257,7 +8236,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Myosit-ak",
+    "component": "Mykofenolsyra på UAS",
     "alternativeNames": [
       "MPA-konc",
       "CellCept"
@@ -8283,7 +8262,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Neuronala antikroppar i likvor",
+    "component": "Myosit-ak",
     "alternativeNames": [
       "antikroppar"
     ],
@@ -8306,7 +8285,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Neuronala antikroppar i serum",
+    "component": "Neuronala antikroppar i likvor",
     "alternativeNames": [
       "IgG",
       "Anti-Hu",
@@ -8335,7 +8314,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Neuronspecifikt enolas",
+    "component": "Neuronala antikroppar i serum",
     "alternativeNames": [
       "IgG",
       "Anti-Hu",
@@ -8364,7 +8343,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Neuropeptid K",
+    "component": "Neuronspecifikt enolas",
     "alternativeNames": [
       "NSE"
     ],
@@ -8387,7 +8366,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Neuropeptid Y",
+    "component": "Neuropeptid K",
     "alternativeNames": [
       "NPK",
       "neurokinin A"
@@ -8413,7 +8392,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Neutraliserande antikroppar mot Interferon Beta",
+    "component": "Neuropeptid Y",
     "alternativeNames": [
       "NPY"
     ],
@@ -8438,7 +8417,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Neutraliserande antikroppar mot Tysabri",
+    "component": "Neutraliserande antikroppar mot Interferon Beta",
     "alternativeNames": [
       "Nab",
       "nADA",
@@ -8463,7 +8442,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "NFL",
+    "component": "Neutraliserande antikroppar mot Tysabri",
     "alternativeNames": [
       "Nab",
       "nADA",
@@ -8488,7 +8467,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Nitisinon",
+    "component": "NFL",
     "alternativeNames": [
       "Neutrofilament light protein",
       "NFp",
@@ -8513,7 +8492,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Njurstensutredning från urologen",
+    "component": "Nitisinon",
     "alternativeNames": [
       "Orfadin",
       "NTBC"
@@ -8537,7 +8516,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Nortriptylin",
+    "component": "Njurstensutredning från urologen",
     "alternativeNames": [],
     "system": "U-",
     "classification": "Centuri",
@@ -8558,7 +8537,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "NSE",
+    "component": "Nortriptylin",
     "alternativeNames": [],
     "system": null,
     "classification": null,
@@ -8579,7 +8558,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "NTx/Kreatinin",
+    "component": "NSE",
     "alternativeNames": [
       "Läkemedel: Sensaval"
     ],
@@ -8610,7 +8589,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Olanzapin",
+    "component": "NTx/Kreatinin",
     "alternativeNames": [
       "Neuronspecifikt enolas"
     ],
@@ -8633,7 +8612,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Orexin-A",
+    "component": "Olanzapin",
     "alternativeNames": [
       "N-terminal telopeptid av kollagen",
       "typ 1/Kreatinin"
@@ -8657,7 +8636,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Orotat",
+    "component": "Orexin-A",
     "alternativeNames": [
       "Arkolamyl",
       "Zalasta",
@@ -8691,7 +8670,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Osmotisk fragilitet",
+    "component": "Orotat",
     "alternativeNames": [
       "Hypokretin-1"
     ],
@@ -8714,7 +8693,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Osteokalcin",
+    "component": "Osmotisk fragilitet",
     "alternativeNames": [
       "Orotsyra"
     ],
@@ -8737,7 +8716,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Oxalat",
+    "component": "Osteokalcin",
     "alternativeNames": [
       "Osmotisk resistens"
     ],
@@ -8760,7 +8739,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Oxkarbazepin",
+    "component": "Oxalat",
     "alternativeNames": [],
     "system": "S-",
     "classification": "Pärmen",
@@ -8781,7 +8760,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Oxykodon",
+    "component": "Oxkarbazepin",
     "alternativeNames": [
       "Oxalsyra",
       "Glycerat",
@@ -8808,7 +8787,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Pankreaspolypeptid",
+    "component": "Oxykodon",
     "alternativeNames": [
       "Hydroxykarbazepin",
       "monohydroxykarbazepin ,Trileptal"
@@ -8839,7 +8818,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Pankreastatin",
+    "component": "Pankreaspolypeptid",
     "alternativeNames": [],
     "system": "P-/S-",
     "classification": "Pärmen",
@@ -8868,7 +8847,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Parenkymskademarkörer",
+    "component": "Pankreastatin",
     "alternativeNames": [
       "Pancreas-polypeptid",
       "PP"
@@ -8892,7 +8871,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Paroxetin",
+    "component": "Parenkymskademarkörer",
     "alternativeNames": [
       "Kromogranin A (prekursor)",
       "pancreastatin"
@@ -8918,7 +8897,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Pepsinogen",
+    "component": "Paroxetin",
     "alternativeNames": [],
     "system": "Csv-",
     "classification": "LabMaster",
@@ -8939,7 +8918,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Peptidscreening",
+    "component": "Pepsinogen",
     "alternativeNames": [],
     "system": "P-/S-",
     "classification": "LabMaster",
@@ -8968,7 +8947,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Perfenazin",
+    "component": "Peptidscreening",
     "alternativeNames": [
       "Pepsinogen A"
     ],
@@ -8991,7 +8970,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "PEth",
+    "component": "Perfenazin",
     "alternativeNames": [],
     "system": "fP-",
     "classification": "Pärmen",
@@ -9016,7 +8995,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "PFA 100",
+    "component": "PEth",
     "alternativeNames": [],
     "system": "P-/S-",
     "classification": "LabMaster",
@@ -9045,7 +9024,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Pipekolsyra",
+    "component": "PFA 100",
     "alternativeNames": [
       "Fosfatidyletanol"
     ],
@@ -9074,7 +9053,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Plasminogenaktivator, vävnads-",
+    "component": "Pipekolsyra",
     "alternativeNames": [],
     "system": null,
     "classification": null,
@@ -9095,7 +9074,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Plasminogenaktivatorhämmare 1 (enz)",
+    "component": "Plasminogenaktivator, vävnads-",
     "alternativeNames": [],
     "system": "P-",
     "classification": "Pärmen",
@@ -9121,7 +9100,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "PNH-diagnostik",
+    "component": "Plasminogenaktivatorhämmare 1 (enz)",
     "alternativeNames": [
       "tPA (imm)"
     ],
@@ -9144,7 +9123,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Porfobilinogendeaminas",
+    "component": "PNH-diagnostik",
     "alternativeNames": [
       "PAI-1"
     ],
@@ -9169,7 +9148,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Porfyri-utredning",
+    "component": "Porfobilinogendeaminas",
     "alternativeNames": [
       "Paroxymal Noktum Hemoglobinuri",
       "CD55/CD59"
@@ -9193,7 +9172,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Precipiterande antikroppar",
+    "component": "Porfyri-utredning",
     "alternativeNames": [
       "EC 2.5.1.61 tidigare EC 4.3.1.8",
       "PBGD",
@@ -9229,7 +9208,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Pregabalin",
+    "component": "Precipiterande antikroppar",
     "alternativeNames": [],
     "system": "B-/F-/U-",
     "classification": "LabMaster",
@@ -9258,7 +9237,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Pregnantriol",
+    "component": "Pregabalin",
     "alternativeNames": [
       "Farmers lung antigen",
       "mögelantigen",
@@ -9283,7 +9262,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Proinsulin",
+    "component": "Pregnantriol",
     "alternativeNames": [
       "Lyrica"
     ],
@@ -9314,7 +9293,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Prokollagen III peptid",
+    "component": "Proinsulin",
     "alternativeNames": [
       "P3"
     ],
@@ -9339,7 +9318,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Prokollagen-1-N-propeptid",
+    "component": "Prokollagen III peptid",
     "alternativeNames": [],
     "system": "fS-",
     "classification": "LabMaster",
@@ -9360,7 +9339,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Protein C",
+    "component": "Prokollagen-1-N-propeptid",
     "alternativeNames": [
       "PIIIP"
     ],
@@ -9383,7 +9362,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Protein S",
+    "component": "Protein C",
     "alternativeNames": [
       "P1NP"
     ],
@@ -9406,7 +9385,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Proteinelektrofores",
+    "component": "Protein S",
     "alternativeNames": [],
     "system": "P-",
     "classification": "LabMaster",
@@ -9427,7 +9406,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Protrombin, genotyp",
+    "component": "Proteinelektrofores",
     "alternativeNames": [
       "Fritt protein S"
     ],
@@ -9450,7 +9429,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Pseudokolinesteras",
+    "component": "Protrombin, genotyp",
     "alternativeNames": [
       "Liquor-elfores"
     ],
@@ -9475,7 +9454,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "PTH, biointakt",
+    "component": "Pseudokolinesteras",
     "alternativeNames": [
       "Protrombin-gen",
       "mutation"
@@ -9501,7 +9480,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "PTHrp",
+    "component": "PTH, biointakt",
     "alternativeNames": [
       "Acetylkolinesteras-aktivitet",
       "pseudocholinesteras"
@@ -9525,7 +9504,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Pyrazinamid",
+    "component": "PTHrp",
     "alternativeNames": [],
     "system": "S-",
     "classification": "Pärmen",
@@ -9546,7 +9525,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Pyridoxal-5-fosfat",
+    "component": "Pyrazinamid",
     "alternativeNames": [
       "PTH-related peptide",
       "parathormonliknande peptid"
@@ -9570,7 +9549,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Quetiapin",
+    "component": "Pyridoxal-5-fosfat",
     "alternativeNames": [
       "Rimcure",
       "Rimstar"
@@ -9594,7 +9573,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Renin",
+    "component": "Quetiapin",
     "alternativeNames": [
       "Pyridoxin",
       "vitamin B6"
@@ -9618,7 +9597,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Retinol",
+    "component": "Renin",
     "alternativeNames": [
       "Seroquel"
     ],
@@ -9649,7 +9628,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Reverse-T3",
+    "component": "Retinol",
     "alternativeNames": [],
     "system": "P-",
     "classification": "LabMaster",
@@ -9670,7 +9649,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Ribavirin",
+    "component": "Reverse-T3",
     "alternativeNames": [
       "A-Vitamin",
       "Vitamin A"
@@ -9694,7 +9673,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Rifampicin",
+    "component": "Ribavirin",
     "alternativeNames": [
       "Trijodtyronin",
       "reverse",
@@ -9720,7 +9699,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Risperidon",
+    "component": "Rifampicin",
     "alternativeNames": [],
     "system": "P-/S-",
     "classification": "Pärmen",
@@ -9749,7 +9728,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Ritonavir",
+    "component": "Risperidon",
     "alternativeNames": [
       "Rifadin",
       "Rimactan",
@@ -9785,7 +9764,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Rivaroxaban",
+    "component": "Ritonavir",
     "alternativeNames": [
       "hydroxyrisperidon"
     ],
@@ -9816,7 +9795,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Rivaroxaban, akut",
+    "component": "Rivaroxaban",
     "alternativeNames": [],
     "system": "P-/S-",
     "classification": "Pärmen",
@@ -9844,7 +9823,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "RNA-baserad analys",
+    "component": "Rivaroxaban, akut",
     "alternativeNames": [
       "Xarelto",
       "antitrombotiska läkemedel",
@@ -9879,7 +9858,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "RPP-ak",
+    "component": "RNA-baserad analys",
     "alternativeNames": [
       "Xarelto",
       "antitrombotiska läkemedel",
@@ -9908,7 +9887,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Rufinamid",
+    "component": "RPP-ak",
     "alternativeNames": [
       "RT-PCR",
       "sekvensering",
@@ -9939,7 +9918,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Selen",
+    "component": "Rufinamid",
     "alternativeNames": [
       "Ribosomalt P-protein antikroppar",
       "antiribosomalt"
@@ -9963,7 +9942,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Sertralin",
+    "component": "Selen",
     "alternativeNames": [],
     "system": "P-/S-",
     "classification": "Pärmen",
@@ -9992,7 +9971,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "SHBG (Beställningsbar i Cosmic)",
+    "component": "Sertralin",
     "alternativeNames": [
       "Se"
     ],
@@ -10015,7 +9994,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Sialinsyra, fri och total (urin)",
+    "component": "SHBG (Beställningsbar i Cosmic)",
     "alternativeNames": [
       "Desmetylsertralin\r\nLäkemedel: Zoloft"
     ],
@@ -10045,7 +10024,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Sirolimus (konc)",
+    "component": "Sialinsyra, fri och total (urin)",
     "alternativeNames": [
       "Könshormonbindande globulin"
     ],
@@ -10068,7 +10047,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Somatostatin",
+    "component": "Sirolimus (konc)",
     "alternativeNames": [
       "Acetylneuraminsyra",
       "neuraminsyra"
@@ -10094,7 +10073,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Spice-metaboliter",
+    "component": "Somatostatin",
     "alternativeNames": [
       "Rapamycin\r\nLäkemedel: Rapamune"
     ],
@@ -10124,7 +10103,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Stenanalys",
+    "component": "Spice-metaboliter",
     "alternativeNames": [],
     "system": "fP-",
     "classification": "Pärmen",
@@ -10147,7 +10126,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Steroidmönster",
+    "component": "Stenanalys",
     "alternativeNames": [
       "syntetiska cannabinoider",
       "spice",
@@ -10201,7 +10180,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Streptolysin O-antikroppar",
+    "component": "Steroidmönster",
     "alternativeNames": [
       "Urinvägskonkrement",
       "konkrement",
@@ -10226,7 +10205,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Störd könsutveckling",
+    "component": "Streptolysin O-antikroppar",
     "alternativeNames": [
       "Steroidmetaboliter",
       "Steroidprofil",
@@ -10257,7 +10236,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Substans P",
+    "component": "Störd könsutveckling",
     "alternativeNames": [
       "ak"
     ],
@@ -10280,7 +10259,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Succinylaceton i Urin",
+    "component": "Substans P",
     "alternativeNames": [
       "AR",
       "SRD5A2",
@@ -10319,7 +10298,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Sulfonamid",
+    "component": "Succinylaceton i Urin",
     "alternativeNames": [
       "SP"
     ],
@@ -10344,7 +10323,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tau",
+    "component": "Sulfonamid",
     "alternativeNames": [],
     "system": "U-",
     "classification": "Pärmen",
@@ -10367,7 +10346,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tau haplotyp",
+    "component": "Tau",
     "alternativeNames": [
       "Trimetoprim",
       "Sulfametoxazol\r\nLäkemedelsex.: Bactrim",
@@ -10394,7 +10373,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Teikoplanin",
+    "component": "Tau haplotyp",
     "alternativeNames": [],
     "system": "Csv-",
     "classification": "LabMaster",
@@ -10415,7 +10394,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Testosteron, bioaktivt",
+    "component": "Teikoplanin",
     "alternativeNames": [
       "H1/H1",
       "genotyp"
@@ -10439,7 +10418,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tiamin",
+    "component": "Testosteron, bioaktivt",
     "alternativeNames": [
       "Targocid"
     ],
@@ -10471,7 +10450,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tiopurinmetaboliter",
+    "component": "Tiamin",
     "alternativeNames": [
       "icke SHBG-bundet"
     ],
@@ -10496,7 +10475,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tissue Polypeptide Specific antigen",
+    "component": "Tiopurinmetaboliter",
     "alternativeNames": [
       "B1",
       "Vitamin B1",
@@ -10521,7 +10500,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "T-lymfocytanalys utvidgad",
+    "component": "Tissue Polypeptide Specific antigen",
     "alternativeNames": [
       "Meraptopurin",
       "TGN",
@@ -10549,7 +10528,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tokoferol, alfa",
+    "component": "T-lymfocytanalys utvidgad",
     "alternativeNames": [
       "TPS",
       "TPA"
@@ -10573,7 +10552,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Topiramat",
+    "component": "Tokoferol, alfa",
     "alternativeNames": [
       "CD3",
       "CD4",
@@ -10606,7 +10585,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "TPMT",
+    "component": "Topiramat",
     "alternativeNames": [
       "alfa-Tokoferol",
       "Vitamin E",
@@ -10631,7 +10610,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Trace protein, beta-",
+    "component": "TPMT",
     "alternativeNames": [
       "Läkemedel: Topimax",
       "Topamac",
@@ -10664,7 +10643,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "TRAK (IgG) (Beställningsbar i Cosmic)",
+    "component": "Trace protein, beta-",
     "alternativeNames": [
       "Tiopurinmetyltransferas",
       "fenotyp och genotyp"
@@ -10690,7 +10669,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tramadol",
+    "component": "TRAK (IgG) (Beställningsbar i Cosmic)",
     "alternativeNames": [],
     "system": "Sekret-",
     "classification": "LabMaster",
@@ -10711,7 +10690,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Transferrinreceptor, löslig",
+    "component": "Tramadol",
     "alternativeNames": [
       "TSH-receptor-antikroppar"
     ],
@@ -10734,7 +10713,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Transtyretin",
+    "component": "Transferrinreceptor, löslig",
     "alternativeNames": [
       "Läkemedel: Gemadol",
       "Nobligan",
@@ -10769,7 +10748,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Trombocyt-antikroppar",
+    "component": "Transtyretin",
     "alternativeNames": [
       "sTfR"
     ],
@@ -10792,7 +10771,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Trombocyt-funktion",
+    "component": "Trombocyt-antikroppar",
     "alternativeNames": [
       "Prealbumin",
       "TBPA",
@@ -10817,7 +10796,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Trombocyt-receptorer",
+    "component": "Trombocyt-funktion",
     "alternativeNames": [
       "HPA-antikroppar",
       "Trombocytopeni utredning",
@@ -10844,7 +10823,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tryptas",
+    "component": "Trombocyt-receptorer",
     "alternativeNames": [],
     "system": "(B)Trc-",
     "classification": "Pärmen",
@@ -10865,7 +10844,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "tTG-IgG",
+    "component": "Tryptas",
     "alternativeNames": [],
     "system": "(B)Trc-",
     "classification": "Pärmen",
@@ -10886,7 +10865,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tumor necrosis factor alpha",
+    "component": "tTG-IgG",
     "alternativeNames": [],
     "system": "S-",
     "classification": "LabMaster",
@@ -10909,7 +10888,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tvärstrimmig muskel, Anti-",
+    "component": "Tumor necrosis factor alpha",
     "alternativeNames": [
       "Transglutaminas-antikroppar"
     ],
@@ -10932,7 +10911,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tymidinkinas",
+    "component": "Tvärstrimmig muskel, Anti-",
     "alternativeNames": [
       "TNF-alfa"
     ],
@@ -10955,7 +10934,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tyreoglobulin",
+    "component": "Tymidinkinas",
     "alternativeNames": [],
     "system": "S-",
     "classification": "Centuri",
@@ -10976,7 +10955,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Tyreoglobulin-antikroppar",
+    "component": "Tyreoglobulin",
     "alternativeNames": [
       "TK"
     ],
@@ -10999,7 +10978,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Uran",
+    "component": "Tyreoglobulin-antikroppar",
     "alternativeNames": [
       "Tg"
     ],
@@ -11022,7 +11001,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Urinscreening, missbruksmedel",
+    "component": "Uran",
     "alternativeNames": [
       "Anti-Tg"
     ],
@@ -11045,7 +11024,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Vancomycin i Likvor",
+    "component": "Urinscreening, missbruksmedel",
     "alternativeNames": [],
     "system": "U-",
     "classification": "Centuri",
@@ -11066,7 +11045,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "VASP",
+    "component": "Vancomycin i Likvor",
     "alternativeNames": [
       "Morfinalkaloider",
       "Amfetamin/Ecstasy (centralstimulerande aminer)",
@@ -11111,7 +11090,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "VEGF",
+    "component": "VASP",
     "alternativeNames": [],
     "system": "Csv-",
     "classification": "Pärmen",
@@ -11132,7 +11111,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Venlafaxin",
+    "component": "VEGF",
     "alternativeNames": [
       "Trombocyt",
       "clopidogrelresistens"
@@ -11156,7 +11135,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "VIP",
+    "component": "Venlafaxin",
     "alternativeNames": [
       "Vascular endothelial growth factor"
     ],
@@ -11179,7 +11158,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Viskositet",
+    "component": "VIP",
     "alternativeNames": [
       "o-desmetylvenlafaxin"
     ],
@@ -11211,7 +11190,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Vitamin B2",
+    "component": "Viskositet",
     "alternativeNames": [
       "Vasoaktiv intestinal peptid"
     ],
@@ -11234,7 +11213,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Vitamin D, 25-hydroxi (Beställningsbar i Cosmic)",
+    "component": "Vitamin B2",
     "alternativeNames": [
       "M-komponenter",
       "kryoproteiner och andra proteiner"
@@ -11258,7 +11237,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "VLCFA",
+    "component": "Vitamin D, 25-hydroxi (Beställningsbar i Cosmic)",
     "alternativeNames": [
       "Riboflavin",
       "FMN"
@@ -11282,7 +11261,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "von Hippel-Lindau syndrom",
+    "component": "VLCFA",
     "alternativeNames": [
       "Vitamin D,25-OH-"
     ],
@@ -11305,7 +11284,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "von Willebrandfaktor antigen",
+    "component": "von Hippel-Lindau syndrom",
     "alternativeNames": [
       "Långkedjiga fettsyror",
       "dimetylacetaler",
@@ -11335,7 +11314,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "von Willebrandfaktor GP1bA (aktivitet)",
+    "component": "von Willebrandfaktor antigen",
     "alternativeNames": [
       "VHL"
     ],
@@ -11358,7 +11337,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "von Willebrandfaktor-antikropp",
+    "component": "von Willebrandfaktor GP1bA (aktivitet)",
     "alternativeNames": [
       "vWF (imm)"
     ],
@@ -11383,7 +11362,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Vorikonazol",
+    "component": "von Willebrandfaktor-antikropp",
     "alternativeNames": [
       "vWF akt",
       "Rco-akt"
@@ -11409,7 +11388,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Ziprasidon",
+    "component": "Vorikonazol",
     "alternativeNames": [
       "vWF-ak"
     ],
@@ -11432,7 +11411,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Zolpidem",
+    "component": "Ziprasidon",
     "alternativeNames": [
       "Vfend"
     ],
@@ -11464,7 +11443,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Zonisamid",
+    "component": "Zolpidem",
     "alternativeNames": [
       "Zeldox",
       "Metyldihydroziprasidon"
@@ -11496,7 +11475,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Zopiklon",
+    "component": "Zonisamid",
     "alternativeNames": [],
     "system": "S-",
     "classification": "LabMaster",
@@ -11519,7 +11498,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Zuklopentixol",
+    "component": "Zopiklon",
     "alternativeNames": [
       "Zonegran"
     ],
@@ -11549,7 +11528,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Östradiol, känslig",
+    "component": "Zuklopentixol",
     "alternativeNames": [],
     "system": "S-",
     "classification": "Pärmen",
@@ -11572,7 +11551,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": "Östradiol, ultra-känslig",
+    "component": "Östradiol, känslig",
     "alternativeNames": [],
     "system": "P-/S-",
     "classification": "LabMaster",
@@ -11600,7 +11579,7 @@ var methods = [
     "updatedBy": "Sign."
   },
   {
-    "component": null,
+    "component": "Östradiol, ultra-känslig",
     "alternativeNames": [
       "Ö2",
       "Estradiol",
