@@ -1,0 +1,58 @@
+<div class="method">
+  <div class="titleRow">
+    <h2>{{method.component}}, {{method.system}}</h2>
+    <h3>{{method.classification}}</h3>
+  </div>
+
+  <table>
+    <tr ng-if="method.alternativeNames.length">
+      <td class="label">Alternativa sökord:</td>
+      <td>
+        <ul class="tableList">
+          <li ng-repeat="alt in method.alternativeNames">{{alt}}</li>
+        </ul>
+      </td>
+    </tr>
+
+    <tr ng-if="method.sample">
+      <td class="label">Provtagning:</td>
+      <td> {{method.sample}} </td>
+    </tr>
+
+    <tr ng-if="method.comment">
+      <td class="label">Övrigt:</td>
+      <td> {{method.comment}} </td>
+    </tr>
+
+    <tr ng-if="method.toLabWithin">
+      <td class="label">Laboratoriet tillhanda:</td>
+      <td> {{method.toLabWithin}} </td>
+    </tr>
+
+    <tr ng-if="method.handling">
+      <td class="label">Provhantering:</td>
+      <td> {{method.handling}} </td>
+    </tr>
+
+    <tr ng-if="method.storage">
+      <td class="label">Förvaring och transport:</td>
+      <td> {{method.storage}} </td>
+    </tr>
+
+    <tr ng-if="method.destination">
+      <td class="label">Skickas till:</td>
+      <td> {{method.destination}} </td>
+    </tr>
+
+    <tr ng-if="method.source">
+      <td class="label">Informationskälla:</td>
+      <td> <a href="{{method.source}}">{{method.source}}</a> </td>
+    </tr>
+
+    <tr ng-if="method.updated">
+      <td class="label">Uppdaterad:</td>
+      <td> {{method.updated}} av {{method.updatedBy}}</td>
+    </tr>
+
+  </table>
+</div>

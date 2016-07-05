@@ -1,0 +1,38 @@
+<div>
+  <!-- Search form -->
+  <div class="subheader">
+    <form ng-submit="">
+      <md-radio-group ng-model="personelType">
+        <md-radio-button value="health" aria-label="Vårdpersonal">Vårdpersonal</md-radio-button>
+        <md-radio-button value="lab" aria-label="Laboratoriepersonal">Laboratoriepersonal</md-radio-button>
+      </md-radio-group>
+
+      <div class="search">
+        <md-autocomplete
+            md-selected-item="selectedItem"
+            md-search-text="searchText"
+            md-items="item in search(searchText)"
+            md-item-text="item.component"
+            md-min-length="1"
+            placeholder="Sök efter provtagningsanvisningar">
+
+          <md-item-template>
+            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.component}}, {{item.system}}</span>
+          </md-item-template>
+
+          <md-not-found>
+            "{{searchText}}" hittades inte.
+          </md-not-found>
+        </md-autocomplete>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- List -->
+  <ul class="methodList" ng-if="!selectedItem">
+    <li ng-repeat="method in methods track by $index">
+      <a ng-click="select($index)">{{method.component}}, {{method.system}}</a>
+    </li>
+  </ul>
+</div>

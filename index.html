@@ -1,142 +1,46 @@
 <!DOCTYPE html>
-<html lang="sv">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Analyslista</title>
-    <!-- Angular Material style sheet -->
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
-    <link rel="stylesheet" href="styles.css" media="screen" charset="utf-8">
-  </head>
-  <body ng-app="MethodApp" ng-cloak>
-    <!-- Angular Material requires Angular.js Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
-
-    <!-- Angular Material Library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-
-    <script type="text/javascript" src="methods.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-
-
-    <!-- The actual website -->
-    <div ng-controller="MethodController as ctrl">
-      <md-content>
-
-        <div class="header container">
-          <h1>Provtagningsanvisningar</h1>
-          <img src="http://www.ltv.se/images/landstinget-vastmanland.png" alt="" />
-        </div>
-
-        <div class="subheader">
-          <form ng-submit="$event.preventDefault()">
-
-            <!-- <md-checkbox ng-model="isChecked" aria-label="Finished?"> -->
-
-            </md-checkbox>
-            <md-radio-group ng-model="personelType">
-              <md-radio-button value="health" aria-label="Vårdpersonal">Vårdpersonal</md-radio-button>
-              <md-radio-button value="lab" aria-label="Laboratoriepersonal">Laboratoriepersonal</md-radio-button>
-            </md-radio-group>
-
-            <div class="search">
-              <md-autocomplete
-                  md-selected-item="ctrl.selectedItem"
-                  md-search-text="ctrl.searchText"
-                  md-items="item in ctrl.querySearch(ctrl.searchText)"
-                  md-item-text="item.component"
-                  md-min-length="1"
-                  placeholder="Sök efter provtagningsanvisningar">
-
-                <md-item-template>
-                  <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.component}}, {{item.system}}</span>
-                </md-item-template>
-
-                <md-not-found>
-                  "{{ctrl.searchText}}" hittades inte.
-                </md-not-found>
-              </md-autocomplete>
-
-              <!-- <input class="md-primary md-button md-raised" type="submit" name="name" value="Sök"> -->
-            </div>
-          </form>
-        </div>
-
-
-        <div class="method" ng-if="ctrl.selectedItem">
-          <div class="titleRow">
-            <h2>{{ctrl.selectedItem.component}}, {{ctrl.selectedItem.system}}</h2>
-            <h3>{{ctrl.selectedItem.classification}}</h3>
-          </div>
-
-          <table>
-            <tr ng-if="ctrl.selectedItem.alternativeNames.length">
-              <td class="label">Alternativa sökord:</td>
-              <td>
-                <ul class="tableList">
-                  <li ng-repeat="alt in ctrl.selectedItem.alternativeNames">{{alt}}</li>
-                </ul>
-              </td>
-            </tr>
-
-            <tr ng-if="ctrl.selectedItem.sample">
-              <td class="label">Provtagning:</td>
-              <td> {{ctrl.selectedItem.sample}} </td>
-            </tr>
-
-            <tr ng-if="ctrl.selectedItem.comment">
-              <td class="label">Övrigt:</td>
-              <td> {{ctrl.selectedItem.comment}} </td>
-            </tr>
-
-            <tr ng-if="ctrl.selectedItem.toLabWithin">
-              <td class="label">Laboratoriet tillhanda:</td>
-              <td> {{ctrl.selectedItem.toLabWithin}} </td>
-            </tr>
-
-            <tr ng-if="ctrl.selectedItem.handling">
-              <td class="label">Provhantering:</td>
-              <td> {{ctrl.selectedItem.handling}} </td>
-            </tr>
-
-            <tr ng-if="ctrl.selectedItem.storage">
-              <td class="label">Förvaring och transport:</td>
-              <td> {{ctrl.selectedItem.storage}} </td>
-            </tr>
-
-            <tr ng-if="ctrl.selectedItem.destination">
-              <td class="label">Skickas till:</td>
-              <td> {{ctrl.selectedItem.destination}} </td>
-            </tr>
-
-            <tr ng-if="ctrl.selectedItem.source">
-              <td class="label">Informationskälla:</td>
-              <td> <a href="{{ctrl.selectedItem.source}}">{{ctrl.selectedItem.source}}</a> </td>
-            </tr>
-
-            <tr ng-if="ctrl.selectedItem.updated">
-              <td class="label">Uppdaterad:</td>
-              <td> {{ctrl.selectedItem.updated}} av {{ctrl.selectedItem.updatedBy}}</td>
-            </tr>
-
-          </table>
-        </div>
-
-        <ul class="methodList" ng-if="!ctrl.selectedItem">
-          <li ng-repeat="method in methods">
-            <a ng-click="ctrl.selectedItem = method">{{method.component}}, {{method.system}}</a>
-          </li>
-        </ul>
-
-        <div class="footer container">
-          Skapad av <br />
-          Gustav Sobel & Daniel Ström.
-        </div>
-
-      </md-content>
+<html lang="sv" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analyslista</title>
+  <!-- Angular Material stylesheet -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <!-- App stylesheet -->
+  <link rel="stylesheet" href="styles.css" media="screen" charset="utf-8">
+</head>
+<body ng-cloak>
+  <md-content>
+    <!-- Header -->
+    <div class="header container">
+      <h1>Provtagningsanvisningar</h1>
+      <img src="http://www.ltv.se/images/landstinget-vastmanland.png" alt="" />
     </div>
-  </body>
+
+    <!-- Main content -->
+    <div ng-view></div>
+
+    <!-- Footer -->
+    <div class="footer container">
+      Skapad av <br />
+      Gustav Sobel & Daniel Ström.
+    </div>
+  </md-content>
+
+  <!-- Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+  <!-- App scripts -->
+  <script src="app.js"></script>
+  <script src="methods.js"></script>
+  <script src="list/controller.js"></script>
+  <script src="detail/controller.js"></script>
+</body>
 </html>

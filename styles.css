@@ -123,3 +123,7 @@ tr:nth-child(odd) {
   list-style: none;
   align-self: flex-start;
 }
+
+md-progress-linear {
+  display: none;
+}
