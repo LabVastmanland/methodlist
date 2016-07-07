@@ -35,6 +35,13 @@ body.lab .header {
   border-bottom-color: #197593;
 }
 
+a.title {
+  color: white;
+  text-decoration: none;
+}
+a.title:hover {
+  color: white
+}
 .header h1 {
   margin: 0;
   font-weight: 500;
