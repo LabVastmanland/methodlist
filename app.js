@@ -8,7 +8,7 @@ angular
   ])
   .config(function($locationProvider, $routeProvider) {
     $routeProvider.otherwise({redirectTo: '/'});
-    // $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
   })
   .controller('AppController', function($scope, $q, $location, methods) {
     $scope.personelType = 'health';

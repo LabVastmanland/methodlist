@@ -1,8 +1,14 @@
 <div>
-  <!-- List -->
-  <ul class="methodList">
-    <li ng-repeat="method in methods">
-      <a ng-click="select(method.ID)">{{method.Komponent}}, {{method.System}}</a>
-    </li>
+  <ul class="alphabet">
+    <li ng-repeat="letter in alphabet"><a href="#{{letter}}" ng-class="{disabled: letters.indexOf(letter) == -1}">{{letter}}</a></li>
   </ul>
+  <!-- List -->
+  <div id="{{letter}}" class="letterGroup" ng-repeat="letter in letters | orderBy">
+    <h2>&nbsp;{{letter}}&nbsp;</h2>
+    <ul class="methodList">
+      <li ng-repeat="method in groups[letter]">
+        <a ng-click="select(method.ID)">{{method.Komponent}}, {{method.System}}</a>
+      </li>
+    </ul>
+  </div>
 </div>
