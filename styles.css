@@ -68,18 +68,20 @@ body.lab .subheader {
   background: #b6d9e1;
 }
 
+.container {
+  width: 100%;
+}
+
 .method {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 30px;
   padding-right: 30px;
-  max-width: 900px;
 }
 
 .method .titleRow {
   display: flex;
   justify-content: space-between;
-  max-width: 900px;
 }
 
 .method h3 {
@@ -89,6 +91,7 @@ body.lab .subheader {
 td {
   vertical-align: top;
   padding: 15px;
+  width: 100%;
 }
 
 td.label {
