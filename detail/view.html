@@ -1,57 +1,57 @@
 <div class="method">
   <div class="titleRow">
-    <h2>{{method.component}}, {{method.system}}</h2>
-    <h3>{{method.classification}}</h3>
+    <h2>{{method.Komponent}}, {{method.System}}</h2>
+    <h3>{{method.Specialitet}}</h3>
   </div>
 
   <table>
-    <tr ng-if="method.alternativeNames.length">
+    <tr ng-if="method['Alternativa Sökord'].length">
       <td class="label">Alternativa sökord:</td>
       <td>
         <ul class="tableList">
-          <li ng-repeat="alt in method.alternativeNames">{{alt}}</li>
+          <li ng-repeat="alt in method['Alternativa Sökord'].split(', ')">{{alt}}</li>
         </ul>
       </td>
     </tr>
 
-    <tr ng-if="method.sample">
+    <tr ng-if="method.Provtagning">
       <td class="label">Provtagning:</td>
-      <td> {{method.sample}} </td>
+      <td> {{method.Provtagning}} </td>
     </tr>
 
-    <tr ng-if="method.comment">
+    <tr ng-if="method['Övrigt']">
       <td class="label">Övrigt:</td>
-      <td> {{method.comment}} </td>
+      <td> {{method['Övrigt']}} </td>
     </tr>
 
-    <tr ng-if="method.toLabWithin">
+    <tr ng-if="method['Laboratoriet tillhanda']">
       <td class="label">Laboratoriet tillhanda:</td>
-      <td> {{method.toLabWithin}} </td>
+      <td> {{method['Laboratoriet tillhanda']}} </td>
     </tr>
 
-    <tr ng-if="method.handling">
+    <tr ng-if="method.Provhantering">
       <td class="label">Provhantering:</td>
-      <td> {{method.handling}} </td>
+      <td> {{method.Provhantering}} </td>
     </tr>
 
-    <tr ng-if="method.storage">
+    <tr ng-if="method['Förvaring/Hållbarhet']">
       <td class="label">Förvaring och transport:</td>
-      <td> {{method.storage}} </td>
+      <td> {{method['Förvaring/Hållbarhet']}} </td>
     </tr>
 
-    <tr ng-if="method.destination">
+    <tr ng-if="method['Skickas till']">
       <td class="label">Skickas till:</td>
-      <td> {{method.destination}} </td>
+      <td> {{method['Skickas till']}} </td>
     </tr>
 
-    <tr ng-if="method.source">
+    <tr ng-if="method['Weblänk']">
       <td class="label">Informationskälla:</td>
-      <td> <a href="{{method.source}}">{{method.source}}</a> </td>
+      <td> <a href="{{method['Weblänk']}}">{{method['Weblänk']}}</a> </td>
     </tr>
 
-    <tr ng-if="method.updatedAt">
+    <tr ng-if="method.Uppdaterad">
       <td class="label">Uppdaterad:</td>
-      <td> {{method.updatedAt}} av {{method.updatedBy}}</td>
+      <td> {{method.Uppdaterad}} av {{method['Sign.']}}</td>
     </tr>
 
   </table>

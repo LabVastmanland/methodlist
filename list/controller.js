@@ -10,9 +10,16 @@ angular
     });
   })
 
-  .controller("ListController", function($scope, $q, $location, METHODS) {
+  .controller("ListController", function($scope, $q, $location, methods) {
+    console.log(methods);
     $scope.personelType = 'health';
-    $scope.methods = METHODS;
+    $scope.methods = methods;
+
+    $scope.$watch('selectedItem', function(method) {
+      if (method) {
+        $scope.select(method.ID);
+      }
+    })
 
     $scope.select = function (index) {
       $location.path('/' + index);
@@ -25,7 +32,7 @@ angular
         } else {
           resolve($scope.methods.filter(function (method) {
             try {
-              return method.component.toLowerCase().indexOf(text.toLowerCase()) != -1;
+              return method.Komponent.toLowerCase().indexOf(text.toLowerCase()) != -1;
             } catch (e) {
               return false;
             }

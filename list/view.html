@@ -12,12 +12,12 @@
             md-selected-item="selectedItem"
             md-search-text="searchText"
             md-items="item in search(searchText)"
-            md-item-text="item.component"
+            md-item-text="item.Komponent"
             md-min-length="1"
             placeholder="Sök efter provtagningsanvisningar">
 
           <md-item-template>
-            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.component}}, {{item.system}}</span>
+            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.Komponent}}, {{item.System}}</span>
           </md-item-template>
 
           <md-not-found>
@@ -31,8 +31,8 @@
 
   <!-- List -->
   <ul class="methodList" ng-if="!selectedItem">
-    <li ng-repeat="method in methods track by $index">
-      <a ng-click="select($index)">{{method.component}}, {{method.system}}</a>
+    <li ng-repeat="method in methods">
+      <a ng-click="select(method.ID)">{{method.Komponent}}, {{method.System}}</a>
     </li>
   </ul>
 </div>

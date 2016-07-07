@@ -10,6 +10,12 @@ angular
     });
   })
 
-  .controller("DetailController", function($scope, $routeParams, METHODS) {
-    $scope.method = METHODS[$routeParams.id];
+  .controller("DetailController", function($scope, $routeParams, methods) {
+    $scope.method = methods.reduce(function(found, method) {
+      if (found) {
+        return found;
+      } else if (method.ID == $routeParams.id) {
+        return method;
+      }
+    }, null);
   });
