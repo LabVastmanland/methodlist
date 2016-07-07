@@ -2,7 +2,7 @@ angular
   .module("app.methods", [])
   .factory('methods', function($http) {
     function id(x) { return x; }
-    return $http.get('http://gustavsobel.github.io/methodlist/data/Analyslista.htm')
+    return $http.get('https://gustavsobel.github.io/methodlist/data/Analyslista.htm')
       .then(function (response) {
         if (!response.status === 200) {
           throw new Error('Could not fetch method data.');
