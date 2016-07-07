@@ -40,7 +40,8 @@
               placeholder="Sök efter provtagningsanvisningar">
 
             <md-item-template>
-              <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.Komponent}}, {{item.System}}</span>
+              <span ng-if="item.Komponent.toLowerCase().indexOf(searchText.toLowerCase()) !== -1" md-highlight-text="searchText" md-highlight-flags="^i">{{item.Komponent}}, {{item.System}}</span>
+              <span ng-if="item.Komponent.toLowerCase().indexOf(searchText.toLowerCase()) === -1" md-highlight-text="searchText" md-highlight-flags="^i">{{item.Komponent}} ({{item['Alternativa Sökord'].split(', ').filter(searchFor(searchText))[0]}}), {{item.System}}</span>
             </md-item-template>
 
             <md-not-found>

@@ -28,6 +28,12 @@ angular
       $location.path('/' + index);
     }
 
+    $scope.searchFor = function (substr) {
+      return function (text) {
+        return text.indexOf(substr) !== -1;
+      }
+    }
+
     $scope.search = function (text) {
       return $q(function(resolve, reject){
         if (!text) {
