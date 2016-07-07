@@ -4,8 +4,8 @@ angular
     return [{
       "ID": "1",
       "Komponent": "ADA",
-      "Alternativa Sökord": "asdfasf, aasdfsdf",
-      "System": "asdf",
+      "Alternativa Sökord": "ujk, polå",
+      "System": "S-",
       "Specialitet": "fdsa",
       "Klass": "qwerqwer",
       "Rörfärg": "fdasasdf",

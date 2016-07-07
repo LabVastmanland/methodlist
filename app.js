@@ -35,7 +35,11 @@ angular
         } else {
           resolve($scope.methods.filter(function (method) {
             try {
-              return method.Komponent.toLowerCase().indexOf(text.toLowerCase()) != -1;
+              var names = [method.Komponent];
+              names = names.concat(method['Alternativa Sökord'].split(', '));
+              return names.reduce(function(found, name){
+                return found || name.toLowerCase().indexOf(text.toLowerCase()) != -1;
+              }, false);
             } catch (e) {
               return false;
             }
