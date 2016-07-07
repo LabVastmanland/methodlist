@@ -9,13 +9,45 @@
   <!-- App stylesheet -->
   <link rel="stylesheet" href="styles.css" media="screen" charset="utf-8">
 </head>
-<body ng-cloak>
+<body ng-controller="AppController" ng-class="{lab: personelType === 'lab'}" ng-cloak>
   <md-content>
     <!-- Header -->
     <div class="header container">
       <h1>Provtagningsanvisningar</h1>
       <img src="http://www.ltv.se/images/landstinget-vastmanland.png" alt="" />
     </div>
+
+
+    <!-- Search form -->
+    <div class="subheader">
+      <form ng-submit="">
+        <md-radio-group ng-model="personelType">
+          <md-radio-button value="health" aria-label="Vårdpersonal">Vårdpersonal</md-radio-button>
+          <md-radio-button value="lab" aria-label="Laboratoriepersonal">Laboratoriepersonal</md-radio-button>
+        </md-radio-group>
+
+        <div class="search">
+          <md-autocomplete
+              md-selected-item="selectedItem"
+              md-search-text="searchText"
+              md-items="item in search(searchText)"
+              md-item-text="item.Komponent"
+              md-min-length="1"
+              placeholder="Sök efter provtagningsanvisningar">
+
+            <md-item-template>
+              <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.Komponent}}, {{item.System}}</span>
+            </md-item-template>
+
+            <md-not-found>
+              "{{searchText}}" hittades inte.
+            </md-not-found>
+          </md-autocomplete>
+        </div>
+      </form>
+    </div>
+
+
 
     <!-- Main content -->
     <div ng-view></div>
