@@ -13,21 +13,23 @@ angular
   .controller("ListController", function($scope, methods) {
     $scope.alphabet = '#ABCDEFGHIJKLMNOPQRSTUVXYZÅÄÖ';
 
-    $scope.groups = methods.reduce(function (groups, method) {
-      var first = method.Komponent.toUpperCase().charAt(0);
+    methods.then(function (methods) {
+      $scope.groups = methods.reduce(function (groups, method) {
+        var first = method.Komponent.toUpperCase().charAt(0);
 
-      if (!first.match(/[a-zåäö]/i)) {
-        first = '#';
-      }
+        if (!first.match(/[a-zåäö]/i)) {
+          first = '#';
+        }
 
-      if (!groups[first]) {
-        groups[first] = [];
-      }
+        if (!groups[first]) {
+          groups[first] = [];
+        }
 
-      groups[first].push(method);
+        groups[first].push(method);
 
-      return groups;
-    }, {})
+        return groups;
+      }, {})
 
-    $scope.letters = Object.keys($scope.groups);
+      $scope.letters = Object.keys($scope.groups);
+    })
   });

@@ -13,7 +13,9 @@ angular
   .controller('AppController', function($scope, $q, $location, methods) {
     $scope.personelType = 'health';
 
-    $scope.methods = methods;
+    methods.then(function (ms) {
+      $scope.methods = ms;
+    })
 
     //TODO: use select instead of location.
     $scope.$watch('selectedItem', function(method) {

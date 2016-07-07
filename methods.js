@@ -1,75 +1,39 @@
 angular
   .module("app.methods", [])
   .factory('methods', function($http) {
-    return [{
-      "ID": "1",
-      "Komponent": "ADA",
-      "Alternativa Sökord": "ujk, polå",
-      "System": "S-",
-      "Specialitet": "fdsa",
-      "Klass": "qwerqwer",
-      "Rörfärg": "fdasasdf",
-      "Provtagning": "cxzv",
-      "Övrigt": "sthrtg",
-      "Remisstext": "cvbhnhfgd",
-      "Remisslänk": "sdfgwer",
-      "Anges på remiss": "qerqew",
-      "Laboratoriet tillhanda": "qwer",
-      "Provhantering": "jjhg",
-      "Förvaring/Hållbarhet": "tyredv",
-      "Skickas till": "hm gfa",
-      "Weblänk": "serq",
-      "Pris": "fsb",
-      "Uppdaterad": "sdfbc",
-      "Sign.": "wertwrd"
-    },
-    {
-      "ID": "2",
-      "Komponent": "EPA",
-      "Alternativa Sökord": "qwe, poiu",
-      "System": "B-",
-      "Specialitet": "fdsa",
-      "Klass": "qwerqwer",
-      "Rörfärg": "fdasasdf",
-      "Provtagning": "cxzv",
-      "Övrigt": "sthrtg",
-      "Remisstext": "cvbhnhfgd",
-      "Remisslänk": "sdfgwer",
-      "Anges på remiss": "qerqew",
-      "Laboratoriet tillhanda": "qwer",
-      "Provhantering": "jjhg",
-      "Förvaring/Hållbarhet": "tyredv",
-      "Skickas till": "hm gfa",
-      "Weblänk": "serq",
-      "Pris": "fsb",
-      "Uppdaterad": "sdfbc",
-      "Sign.": "wertwrd"
-    },
-    {
-      "ID": "3",
-      "Komponent": "åsdfasdf"
-    },
-    {
-      "ID": "4",
-      "Komponent": "1sdfasdf"
-    },
-    {
-      "ID": "5",
-      "Komponent": "msdfasdf"
-    }
-  ];
-    return $http.get('http://gustavsobel.github.io/methodlist/data/Analyslista.csv')
+    function id(x) { return x; }
+    return $http.get('http://gustavsobel.github.io/methodlist/data/Analyslista.htm')
       .then(function (response) {
         if (!response.status === 200) {
           throw new Error('Could not fetch method data.');
         }
 
-        var list = response.data.split('\n');
+        var trPattern = /(?:<tr[\s\S]*?>)([\s\S]*?)(?:<\/tr[\s\S]*?>)/gi,
+            tdPattern = /(?:<td[\s\S]*?>)([\s\S]*?)(?:<\/td[\s\S]*?>)/gi,
+            tr, td, list = [];
 
-        list = list.map(function (row) {
-          return row.split(';');
+        while(tr = trPattern.exec(response.data)) {
+          var row = [];
+          while(td = tdPattern.exec(tr[1])) {
+            var value = td[1]
+              .replace(/&nbsp;/ig, '') // Remove hard spaces
+              .replace(/<[\s\S]*?>/gi, '') // Remove embeded script-tags
+              .trim()
+            row.push(value);
+          }
+          list.push(row);
+        }
+
+        var headers = list[0].filter(id),
+            values = list.slice(1);
+
+        return values.map(function(row) {
+          return headers.reduce(function (json, key, i) {
+            json[key] = row[i];
+            return json;
+          }, {});
+        }).filter(function (obj) {
+          return obj.ID && obj.Komponent;
         })
-
-        // console.log(list[0]);
       });
   });
