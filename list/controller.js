@@ -10,7 +10,7 @@ angular
     });
   })
 
-  .controller("ListController", function($scope, $location, $anchorScroll, methods) {
+  .controller("ListController", function($scope, $window, $location, $anchorScroll, methods) {
     $scope.alphabet = '#ABCDEFGHIJKLMNOPQRSTUVXYZÅÄÖ';
 
     methods.then(function (methods) {
@@ -38,6 +38,24 @@ angular
         } else {
           $anchorScroll();
         }
+      };
+
+      $scope.goToTop = function () {
+        $location.hash(null);
+        $anchorScroll();
       }
-    })
+
+      // Scroll to top behavior.
+      var scrollThreshold = 100;
+      $scope.showReturnToTop = $window.scrollY > scrollThreshold;
+
+      angular.element(window).on('scroll', function (event) {
+        var old = $scope.showReturnToTop;
+        $scope.showReturnToTop = $window.scrollY > scrollThreshold;
+
+        if ($scope.showReturnToTop != old) {
+          $scope.$apply();
+        }
+      });
+    });
   });

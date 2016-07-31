@@ -64,6 +64,9 @@ a.disabled {
   color: #fdc4d7;
 }
 
+.hidden {
+  visibility: hidden;
+}
 
 
 /*
@@ -183,6 +186,23 @@ md-progress-linear {
   display: inline;
 }
 
+.list .returnToTop {
+  display: block;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  font-size: 1.7em;
+  background: #444;
+  color: white;
+  font-weight: bolder;
+  padding: 2px;
+  box-shadow: 0 0 .6em rgba(68, 68, 68, 0.7);
+}
+
+.list .returnToTop:hover {
+  color: white;
+  background: #0aaf8a;
+}
 
 /*
                                           ,,    ,,

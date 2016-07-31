@@ -1,4 +1,4 @@
-<div>
+<div class="list">
   <ul class="alphabet">
     <li ng-repeat="letter in alphabet"><a ng-click="goToHash(letter)" ng-class="{disabled: letters.indexOf(letter) == -1}">{{letter}}</a></li>
   </ul>
@@ -11,4 +11,6 @@
       </li>
     </ul>
   </div>
+
+  <a class="returnToTop" ng-click="goToTop()" ng-class="{hidden: !showReturnToTop}">⇧</a>
 </div>
