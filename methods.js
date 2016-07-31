@@ -1,39 +1,31 @@
 angular
-  .module("app.methods", [])
-  .factory('methods', function($http) {
+  .module("app.methods", ['app.toolbox'])
+  .factory('methods', function($http, _) {
     function id(x) { return x; }
-    return $http.get('https://gustavsobel.github.io/methodlist/data/Analyslista.htm')
+    // return $http.get('https://gustavsobel.github.io/methodlist/data/Analyslista.csv')
+    return $http.get('http://127.0.0.1:8888/data/Analyslista.csv')
       .then(function (response) {
-        if (!response.status === 200) {
-          throw new Error('Could not fetch method data.');
-        }
+        if (response.status !== 200) { throw new Error('Could not fetch method data.') }
+        var rows = response.data.split('\n'),
+            headers = _.head(rows).split(';'),
+            data = _.tail(rows).map(function (row) {
+              return row.split(';');
+            });
 
-        var trPattern = /(?:<tr[\s\S]*?>)([\s\S]*?)(?:<\/tr[\s\S]*?>)/gi,
-            tdPattern = /(?:<td[\s\S]*?>)([\s\S]*?)(?:<\/td[\s\S]*?>)/gi,
-            tr, td, list = [];
+        var objects = data.map(function (values) {
+          if (values.length < headers.length) { return {} };
 
-        while(tr = trPattern.exec(response.data)) {
-          var row = [];
-          while(td = tdPattern.exec(tr[1])) {
-            var value = td[1]
-              .replace(/&nbsp;/ig, '') // Remove hard spaces
-              .replace(/<[\s\S]*?>/gi, '') // Remove embeded script-tags
-              .trim()
-            row.push(value);
+          var obj = {};
+
+          for (var i = 0; i < headers.length; i++) {
+            obj[headers[i]] = values[i].trim();
           }
-          list.push(row);
-        }
 
-        var headers = list[0].filter(id),
-            values = list.slice(1);
+          return obj;
+        });
 
-        return values.map(function(row) {
-          return headers.reduce(function (json, key, i) {
-            json[key] = row[i];
-            return json;
-          }, {});
-        }).filter(function (obj) {
-          return obj.ID && obj.Komponent;
-        })
+        return objects.filter(function (obj) {
+          return Object.keys(obj).length > 0;
+        });
       });
   });
