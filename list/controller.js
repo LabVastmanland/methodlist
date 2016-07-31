@@ -10,7 +10,7 @@ angular
     });
   })
 
-  .controller("ListController", function($scope, methods) {
+  .controller("ListController", function($scope, $location, $anchorScroll, methods) {
     $scope.alphabet = '#ABCDEFGHIJKLMNOPQRSTUVXYZÅÄÖ';
 
     methods.then(function (methods) {
@@ -31,5 +31,13 @@ angular
       }, {})
 
       $scope.letters = Object.keys($scope.groups);
+
+      $scope.goToHash = function (anchor) {
+        if ($location.hash() !== anchor) {
+          $location.hash(anchor);
+        } else {
+          $anchorScroll();
+        }
+      }
     })
   });
