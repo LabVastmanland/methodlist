@@ -1,3 +1,24 @@
+/*
+  Main Stylesheet
+  ===============
+
+  ASCII-art: (Georgia11) http://www.kammerl.de/ascii/AsciiSignature.php
+*/
+
+
+
+/*
+
+  .g8"""bgd
+.dP'     `M
+dM'       ` ,pW"Wq.`7MMpMMMb.pMMMb.  `7MMpMMMb.pMMMb.  ,pW"Wq.`7MMpMMMb.
+MM         6W'   `Wb MM    MM    MM    MM    MM    MM 6W'   `Wb MM    MM
+MM.        8M     M8 MM    MM    MM    MM    MM    MM 8M     M8 MM    MM
+`Mb.     ,'YA.   ,A9 MM    MM    MM    MM    MM    MM YA.   ,A9 MM    MM
+ `"bmmmd'  `Ybmd9'.JMML  JMML  JMML..JMML  JMML  JMML.`Ybmd9'.JMML  JMML.
+*/
+
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
@@ -15,10 +36,46 @@ body.lab {
   background: #0a8eaf;
 }
 
-
 md-content {
   background: white;
 }
+
+.container {
+  padding: 20px 40px;
+}
+
+md-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #fdc4d7;
+}
+
+
+
+/*
+                                       ,,
+  `7MMF'  `7MMF'                     `7MM
+    MM      MM                         MM
+    MM      MM  .gP"Ya   ,6"Yb.   ,M""bMM  .gP"Ya `7Mb,od8
+    MMmmmmmmMM ,M'   Yb 8)   MM ,AP    MM ,M'   Yb  MM' "'
+    MM      MM 8M""""""  ,pm9MM 8MI    MM 8M""""""  MM
+    MM      MM YM.    , 8M   MM `Mb    MM YM.    ,  MM
+  .JMML.  .JMML.`Mbmmd' `Moo9^Yo.`Wbmd"MML.`Mbmmd'.JMML.
+*/
 
 .header {
   background: #0aaf8a;
@@ -35,13 +92,6 @@ body.lab .header {
   border-bottom-color: #197593;
 }
 
-a.title {
-  color: white;
-  text-decoration: none;
-}
-a.title:hover {
-  color: white
-}
 .header h1 {
   margin: 0;
   font-weight: 500;
@@ -49,16 +99,6 @@ a.title:hover {
 
 .header img {
   mix-blend-mode: multiply;
-}
-
-.container {
-  padding: 20px 40px;
-}
-
-md-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .subheader {
@@ -75,58 +115,12 @@ body.lab .subheader {
   background: #b6d9e1;
 }
 
-.container {
-  width: 100%;
-}
-
-.method {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.method .titleRow {
-  display: flex;
-  justify-content: space-between;
-}
-
-.method h3 {
-  font-weight: normal;
-}
-
-td {
-  vertical-align: top;
-  padding: 15px;
-  width: 100%;
-}
-
-td.label {
-  font-weight: bold;
-  width: 200px;
-}
-
-td ul {
-  margin: 0;
-  padding-left: 16px;
-}
-
-tr:nth-child(odd) {
-  background: #f6f6f6
-}
-
-.footer {
-  background: #0aaf8a;
+a.title {
   color: white;
-  text-align: right;
-  border-top: 6px solid #199379;
-  width: 100%;
-  min-height: 8em;
+  text-decoration: none;
 }
-
-body.lab .footer {
-  background: #0a8eaf;
-  border-top-color: #197593;
+a.title:hover {
+  color: white
 }
 
 .search {
@@ -147,18 +141,25 @@ body.lab .footer {
       box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12) !important;
 }
 
-.methodList {
-  padding-left: 45px;
-  padding-right: 45px;
-  list-style: none;
-  align-self: flex-start;
-}
-
 md-progress-linear {
   display: none;
 }
 
-.alphabet {
+
+
+/*
+                ,,
+  `7MMF'        db            mm
+    MM                        MM
+    MM        `7MM  ,pP"Ybd mmMMmm
+    MM          MM  8I   `"   MM
+    MM      ,   MM  `YMMMa.   MM
+    MM     ,M   MM  L.   I8   MM
+  .JMMmmmmMMM .JMML.M9mmmP'   `Mbmo
+*/
+
+
+.list .alphabet {
   display: flex;
   list-style: none;
   padding: 0;
@@ -166,30 +167,101 @@ md-progress-linear {
   margin-bottom: 2em;
 }
 
-.alphabet li {
+.list .alphabet li {
   margin-left: auto;
   margin-right: auto;
 }
 
-.alphabet a {
+.list .alphabet a {
   text-decoration: none;
 }
 
-a {
-  cursor: pointer;
-}
-
-a.disabled {
-  pointer-events: none;
-  cursor: default;
-  color: #fdc4d7;
-}
-
-.letterGroup h2 {
+.list .letterGroup h2 {
   /*color: #f6558c;*/
   background: #444;
   color: white;
   display: inline;
+}
+
+
+/*
+                                          ,,    ,,
+  `7MM"""Yb.             mm              db  `7MM
+    MM    `Yb.           MM                    MM
+    MM     `Mb  .gP"Ya mmMMmm  ,6"Yb.  `7MM    MM
+    MM      MM ,M'   Yb  MM   8)   MM    MM    MM
+    MM     ,MP 8M""""""  MM    ,pm9MM    MM    MM
+    MM    ,dP' YM.    ,  MM   8M   MM    MM    MM
+  .JMMmmmdP'    `Mbmmd'  `Mbmo`Moo9^Yo..JMML..JMML.
+*/
+
+.detail {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.detail .titleRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail h3 {
+  font-weight: normal;
+}
+
+.detail td {
+  vertical-align: top;
+  padding: 15px;
+  width: 100%;
+}
+
+.detail td.label {
+  font-weight: bold;
+  width: 200px;
+}
+
+.detail td ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.detail tr:nth-child(odd) {
+  background: #f6f6f6
+}
+
+.detail .detailList {
+  padding-left: 45px;
+  padding-right: 45px;
+  list-style: none;
+  align-self: flex-start;
+}
+
+
+
+/*
+  `7MM"""YMM                   mm
+    MM    `7                   MM
+    MM   d  ,pW"Wq.   ,pW"Wq.mmMMmm .gP"Ya `7Mb,od8
+    MM""MM 6W'   `Wb 6W'   `Wb MM  ,M'   Yb  MM' "'
+    MM   Y 8M     M8 8M     M8 MM  8M""""""  MM
+    MM     YA.   ,A9 YA.   ,A9 MM  YM.    ,  MM
+  .JMML.    `Ybmd9'   `Ybmd9'  `Mbmo`Mbmmd'.JMML.
+*/
+
+.footer {
+  background: #0aaf8a;
+  color: white;
+  text-align: right;
+  border-top: 6px solid #199379;
+  width: 100%;
+  min-height: 8em;
+}
+
+body.lab .footer {
+  background: #0a8eaf;
+  border-top-color: #197593;
 }
 
 .footer p {
