@@ -4,8 +4,7 @@ angular
     'ngMaterial',
     'app.methods',
     'app.list',
-    'app.detail',
-    'app.toolbox'
+    'app.detail'
   ])
   .config(function($locationProvider, $routeProvider) {
     $routeProvider.otherwise({redirectTo: '/'});

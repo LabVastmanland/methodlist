@@ -1,6 +1,6 @@
 angular
-  .module("app.methods", ['app.toolbox'])
-  .factory('methods', function($http, _) {
+  .module("app.methods", [])
+  .factory('methods', function($http) {
     function id(x) { return x; }
     return $http.get('https://gustavsobel.github.io/methodlist/data/Analyslista.csv')
       .then(function (response) {
