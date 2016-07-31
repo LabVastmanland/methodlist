@@ -191,3 +191,7 @@ a.disabled {
   color: white;
   display: inline;
 }
+
+.footer p {
+  text-align: center;
+}
