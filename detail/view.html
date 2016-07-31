@@ -26,7 +26,7 @@
 
     <tr ng-if="method['Remisstext']">
       <td class="label">Remiss:</td>
-      <td> <a href="{{method['Remisslänk']}}">{{method['Remisstext']}}</a> </td>
+      <td> <a ng-href="{{method['Remisslänk']}}">{{method['Remisstext']}}</a> </td>
     </tr>
 
     <tr ng-if="method['Anges på remiss']">
@@ -56,7 +56,7 @@
 
     <tr ng-if="method['Weblänk'] && personelType === 'lab'">
       <td class="label">Informationskälla:</td>
-      <td> <a href="{{method['Weblänk']}}">{{method['Weblänk']}}</a> </td>
+      <td> <a ng-href="{{method['Weblänk']}}">{{method['Weblänk']}}</a> </td>
     </tr>
 
     <tr ng-if="method.Uppdaterad">
