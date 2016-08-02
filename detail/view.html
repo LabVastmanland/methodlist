@@ -30,9 +30,13 @@
         <td> <a ng-href="{{method['Remisslänk']}}">{{method['Remisstext']}}</a> </td>
       </tr>
 
-      <tr ng-if="method['Anges på remiss']">
+      <tr ng-if="method['Anges på remiss'].length">
         <td class="label">Anges på remiss:</td>
-        <td> {{method['Anges på remiss']}} </td>
+        <td>
+          <ul class="tableList">
+            <li ng-repeat="x in method['Anges på remiss'].split(', ')">{{x}}</li>
+          </ul>
+        </td>
       </tr>
 
       <tr ng-if="method['Laboratoriet tillhanda']">
