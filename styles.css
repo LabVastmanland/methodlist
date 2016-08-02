@@ -245,7 +245,8 @@ md-progress-linear {
 
 .detail td.label {
   font-weight: bold;
-  width: 200px;
+  max-width: 9rem;
+  hyphens: auto;
 }
 
 .detail td ul {
