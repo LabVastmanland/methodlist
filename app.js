@@ -32,7 +32,7 @@ angular
 
     $scope.searchFor = function (substr) {
       return function (text) {
-        return text.indexOf(substr) !== -1;
+        return text.toLowerCase().indexOf(substr.toLowerCase()) !== -1;
       }
     }
 
