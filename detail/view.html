@@ -5,70 +5,70 @@
   </div>
 
   <div class="table-wrapper">
-    <table>
-      <tr ng-if="method['Alternativa Sökord'].length">
-        <td class="label">Alternativa sökord:</td>
-        <td>
+    <ul class="table">
+      <li class="row" ng-if="method['Alternativa Sökord'].length">
+        <div class="cell label">Alternativa sökord</div>
+        <div class="cell">
           <ul class="tableList">
             <li ng-repeat="alt in method['Alternativa Sökord'].split(', ')">{{alt}}</li>
           </ul>
-        </td>
-      </tr>
+        </div>
+      </li>
 
-      <tr ng-if="method.Provtagning">
-        <td class="label">Provtagning:</td>
-        <td> {{method.Provtagning}} </td>
-      </tr>
+      <li class="row" ng-if="method.Provtagning">
+        <div class="cell label">Provtagning</div>
+        <div class="cell">{{method.Provtagning}}</div>
+      </li>
 
-      <tr ng-if="method['Övrigt']">
-        <td class="label">Övrigt:</td>
-        <td> {{method['Övrigt']}} </td>
-      </tr>
+      <li class="row" ng-if="method['Övrigt']">
+        <div class="cell label">Övrigt</div>
+        <div class="cell"> {{method['Övrigt']}} </div>
+      </li>
 
-      <tr ng-if="method['Remisstext']">
-        <td class="label">Remiss:</td>
-        <td> <a ng-href="{{method['Remisslänk']}}">{{method['Remisstext']}}</a> </td>
-      </tr>
+      <li class="row" ng-if="method['Remisstext']">
+        <div class="cell label">Remiss</div>
+        <div class="cell"> <a ng-href="{{method['Remisslänk']}}">{{method['Remisstext']}}</a> </div>
+      </li>
 
-      <tr ng-if="method['Anges på remiss'].length">
-        <td class="label">Anges på remiss:</td>
-        <td>
+      <li class="row" ng-if="method['Anges på remiss'].length">
+        <div class="cell label">Anges på remiss</div>
+        <div class="cell">
           <ul class="tableList">
             <li ng-repeat="x in method['Anges på remiss'].split(', ')">{{x}}</li>
           </ul>
-        </td>
-      </tr>
+        </div>
+      </li>
 
-      <tr ng-if="method['Laboratoriet tillhanda']">
-        <td class="label">Laboratoriet tillhanda:</td>
-        <td> {{method['Laboratoriet tillhanda']}} </td>
-      </tr>
+      <li class="row" ng-if="method['Laboratoriet tillhanda']">
+        <div class="cell label">Laboratoriet tillhanda</div>
+        <div class="cell">{{method['Laboratoriet tillhanda']}} </div>
+      </li>
 
-      <tr ng-if="method.Provhantering && personelType === 'lab'">
-        <td class="label">Provhantering:</td>
-        <td> {{method.Provhantering}} </td>
-      </tr>
+      <li class="row" ng-if="method.Provhantering && personelType === 'lab'">
+        <div class="cell label">Provhantering</div>
+        <div class="cell">{{method.Provhantering}} </div>
+      </li>
 
-      <tr ng-if="method['Förvaring/Hållbarhet'] && personelType === 'lab'">
-        <td class="label">Förvaring och transport:</td>
-        <td> {{method['Förvaring/Hållbarhet']}} </td>
-      </tr>
+      <li class="row" ng-if="method['Förvaring/Hållbarhet'] && personelType === 'lab'">
+        <div class="cell label">Förvaring och transport</div>
+        <div class="cell">{{method['Förvaring/Hållbarhet']}} </div>
+      </li>
 
-      <tr ng-if="method['Skickas till'] && personelType === 'lab'">
-        <td class="label">Skickas till:</td>
-        <td> {{method['Skickas till']}} </td>
-      </tr>
+      <li class="row" ng-if="method['Skickas till'] && personelType === 'lab'">
+        <div class="cell label">Skickas till</div>
+        <div class="cell">{{method['Skickas till']}} </div>
+      </li>
 
-      <tr ng-if="method['Weblänk'] && personelType === 'lab'">
-        <td class="label">Informations&shy;källa:</td>
-        <td> <a ng-href="{{method['Weblänk']}}">{{method['Weblänk']}}</a> </td>
-      </tr>
+      <li class="row" ng-if="method['Weblänk'] && personelType === 'lab'">
+        <div class="cell label">Informations&shy;källa</div>
+        <div class="cell"><a ng-href="{{method['Weblänk']}}">{{method['Weblänk']}}</a> </div>
+      </li>
 
-      <tr ng-if="method.Uppdaterad">
-        <td class="label">Uppdaterad:</td>
-        <td> {{method.Uppdaterad}} av {{method['Sign.']}}</td>
-      </tr>
-    </table>
+      <li class="row" ng-if="method.Uppdaterad">
+        <div class="cell label">Uppdaterad</div>
+        <div class="cell">{{method.Uppdaterad}} av {{method['Sign.']}}</div>
+      </li>
+    </ul>
   </div>
 
   <img ng-if="personelType === 'lab'" class="print" src="img/print.png" alt="print" ng-click="print()" />

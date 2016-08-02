@@ -237,24 +237,35 @@ md-progress-linear {
   font-weight: normal;
 }
 
-.detail td {
-  vertical-align: top;
-  padding: 15px;
-  width: 100%;
+.detail .table {
+  list-style: none;
+  padding: 0;
 }
 
-.detail td.label {
+.detail .row {
+  padding: 1rem;
+}
+
+.detail .cell {
+  overflow-x: scroll;
+}
+
+.detail .cell.label {
   font-weight: bold;
-  max-width: 9rem;
+  padding: 0;
+  margin-bottom: .5rem;
+  /*width: 7rem;
   hyphens: auto;
+  flex-shrink: 0;*/
 }
 
-.detail td ul {
+.detail .cell ul {
   margin: 0;
   padding-left: 16px;
+  list-style: square;
 }
 
-.detail tr:nth-child(odd) {
+.detail .row:nth-child(odd) {
   background: #f6f6f6
 }
 
