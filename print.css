@@ -1,0 +1,7 @@
+@page {
+  size: portrait
+}
+
+.header, .subheader, .footer {
+  display: none;
+}
