@@ -10,7 +10,7 @@ angular
     });
   })
 
-  .controller("DetailController", function($scope, $routeParams, methods) {
+  .controller("DetailController", function($scope, $routeParams, $window, methods) {
     methods.then(function (methods) {
       $scope.method = methods.reduce(function(found, method) {
         if (found) {
@@ -19,5 +19,9 @@ angular
           return method;
         }
       }, null);
+
+      $scope.print = function () {
+        $window.print();
+      }
     })
   });

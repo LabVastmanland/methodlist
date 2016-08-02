@@ -68,7 +68,8 @@
         <td class="label">Uppdaterad:</td>
         <td> {{method.Uppdaterad}} av {{method['Sign.']}}</td>
       </tr>
-
     </table>
   </div>
+
+  <img ng-if="personelType === 'lab'" class="print" src="img/print.png" alt="print" ng-click="print()" />
 </div>

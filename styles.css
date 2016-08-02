@@ -227,6 +227,7 @@ md-progress-linear {
 .detail .table-wrapper {
   max-width: 100%;
   overflow: scroll;
+  margin-bottom: 2rem;
 }
 
 .detail .titleRow {
@@ -263,7 +264,27 @@ md-progress-linear {
   align-self: flex-start;
 }
 
+.detail .print {
+  background: #1b88ab;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: .5rem;
+  position: absolute;
+  right: .5rem;
+  margin-top: -.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 .6rem rgba(68, 68, 68, 0.7);
+}
 
+.detail .print:hover {
+  box-shadow: 0 0 .6rem .1rem rgba(68, 68, 68, 0.7);
+  background: hsla(195,73%,45%,1);
+}
+
+.detail .print:active {
+  box-shadow: none;
+  background: hsla(195,73%,34%,1);
+}
 
 /*
   `7MM"""YMM                   mm
