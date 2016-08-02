@@ -224,16 +224,12 @@ md-progress-linear {
   .JMMmmmdP'    `Mbmmd'  `Mbmo`Moo9^Yo..JMML..JMML.
 */
 
-.detail {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
+.detail .table-wrapper {
+  max-width: 100%;
+  overflow: scroll;
 }
 
 .detail .titleRow {
-  display: flex;
-  justify-content: space-between;
 }
 
 .detail h3 {
