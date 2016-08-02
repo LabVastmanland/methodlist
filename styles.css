@@ -224,12 +224,6 @@ md-progress-linear {
   .JMMmmmdP'    `Mbmmd'  `Mbmo`Moo9^Yo..JMML..JMML.
 */
 
-.detail .table-wrapper {
-  max-width: 100%;
-  overflow: scroll;
-  margin-bottom: 2rem;
-}
-
 .detail .titleRow {
 }
 
@@ -240,6 +234,7 @@ md-progress-linear {
 .detail .table {
   list-style: none;
   padding: 0;
+  margin-bottom: 2rem;
 }
 
 .detail .row {

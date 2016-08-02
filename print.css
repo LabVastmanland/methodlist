@@ -2,6 +2,33 @@
   size: portrait
 }
 
-.header, .subheader, .footer {
+.header, .subheader, .footer, .print {
   display: none;
+}
+
+* {
+  background: none !important;
+  color: black !important
+}
+
+.detail a {
+  word-wrap: break-word;
+}
+
+.detail a:after {
+  content: " [" attr(href) "]";
+  font-size: 80%;
+}
+
+.detail .table .row {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.detail .table .row .cell {
+  margin-left: 1rem;
+}
+
+.detail .table .row .cell.label {
+  margin-left: 0;
 }
