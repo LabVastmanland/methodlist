@@ -191,6 +191,8 @@ md-progress-linear {
 }
 .list .letterGroup ul {
   list-style: none;
+  padding: 0;
+  padding-left: 1rem;
 }
 
 .list .returnToTop {
