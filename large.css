@@ -1,0 +1,32 @@
+@media (min-width: 870px) {
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .header h1 {
+    font-size: 2.7rem;
+  }
+
+  .detail .table .row {
+    display: flex;
+  }
+
+  .detail .table .cell.label {
+    width: 10rem;
+    flex-shrink: 0;
+  }
+
+  .detail .titleRow {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .detail .table .cell.label {
+    width: 14rem;
+  }
+}
