@@ -2,8 +2,6 @@
   size: portrait
 }
 
-.detail .header,
-.detail .subheader,
-.detail .footer {
+.header, .subheader, .footer {
   display: none;
 }
