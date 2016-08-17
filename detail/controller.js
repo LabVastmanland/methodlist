@@ -10,7 +10,13 @@ angular
     });
   })
 
-  .controller("DetailController", function($scope, $routeParams, $window, methods) {
+  .controller("DetailController", function($scope, $rootScope, $routeParams, $window, methods) {
+
+    $scope.$on('$viewContentLoaded', function(event) {
+      // Always scroll to top after loading content.
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
+
     methods.then(function (methods) {
       $scope.method = methods.reduce(function(found, method) {
         if (found) {
