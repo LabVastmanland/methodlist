@@ -26,7 +26,10 @@
 
     <li class="row" ng-if="method['Remisstext']">
       <div class="cell label">Remiss</div>
-      <div class="cell"> <a ng-href="{{method['Remisslänk']}}">{{method['Remisstext']}}</a> </div>
+      <div class="cell">
+        <a ng-if="method['Remisslänk']" target="_blank" ng-href="{{method['Remisslänk']}}">{{method['Remisstext']}}</a>
+        <div ng-if="!method['Remisslänk']" class="cell"> {{method['Remisstext']}} </div>
+      </div>
     </li>
 
     <li class="row" ng-if="method['Anges på remiss'].length">
@@ -60,7 +63,9 @@
 
     <li class="row" ng-if="method['Weblänk'] && personelType === 'lab'">
       <div class="cell label">Informations&shy;källa</div>
-      <div class="cell"><a ng-href="{{method['Weblänk']}}">{{method['Weblänk']}}</a> </div>
+      <div class="cell">
+        <a target="_blank" ng-href="{{method['Weblänk']}}">{{method['Weblänk']}}</a>
+      </div>
     </li>
 
     <li class="row" ng-if="method.Uppdaterad">
@@ -68,6 +73,6 @@
       <div class="cell">{{method.Uppdaterad}} av {{method['Sign.']}}</div>
     </li>
   </ul>
-  
+
   <img ng-if="personelType === 'lab'" class="print" src="img/print.png" alt="print" ng-click="print()" />
 </div>
