@@ -242,7 +242,7 @@ md-progress-linear {
 }
 
 .detail .cell {
-  overflow-x: scroll;
+  /*overflow-x: scroll;*/
 }
 
 .detail .cell.label {
