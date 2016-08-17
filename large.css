@@ -51,9 +51,12 @@
 
   aside {
     width: 30%;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
-  .sidebox {
+  aside .sidebox {
+    width: 100%;
   }
 
   .detail, .list {
