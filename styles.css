@@ -51,10 +51,6 @@ md-content {
   align-items: center;
 }
 
-.content {
-  width: 100%;
-}
-
 a {
   cursor: pointer;
 }
