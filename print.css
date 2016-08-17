@@ -2,7 +2,7 @@
   size: portrait
 }
 
-.header, .subheader, .footer, .print {
+.header, .subheader, .footer, .print, .sidebar {
   display: none;
 }
 
