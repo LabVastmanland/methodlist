@@ -43,6 +43,7 @@
 
   md-content > .container {
     display: flex;
+    justify-content: space-between;
   }
 
   main {
@@ -50,7 +51,7 @@
   }
 
   aside {
-    width: 30%;
+    width: 29%;
     flex-direction: column;
     justify-content: flex-start;
   }
