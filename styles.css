@@ -50,7 +50,7 @@ md-content {
   align-items: center;
 }
 
-.container {
+.content {
   width: 100%;
 }
 
@@ -293,6 +293,50 @@ md-progress-linear {
   box-shadow: none;
   background: hsla(195,73%,34%,1);
 }
+
+/*
+                        ,,        ,,
+      db                db      `7MM
+     ;MM:                         MM
+    ,V^MM.    ,pP"Ybd `7MM   ,M""bMM  .gP"Ya
+   ,M  `MM    8I   `"   MM ,AP    MM ,M'   Yb
+   AbmmmqMA   `YMMMa.   MM 8MI    MM 8M""""""
+  A'     VML  L.   I8   MM `Mb    MM YM.    ,
+.AMA.   .AMMA.M9mmmP' .JMML.`Wbmd"MML.`Mbmmd'
+*/
+
+.sidebox {
+  background: #b6e1d8;
+  margin-top: 1.4rem;
+  border-top-left-radius: .4rem;
+  border-top-right-radius: .4rem;
+}
+
+.sidebox > h2 {
+  background: #0aaf8a;
+  color: white;
+  padding: .4rem;
+  border-bottom: 6px solid #199379;
+  margin: 0;
+  border-top-left-radius: .4rem;
+  border-top-right-radius: .4rem;
+  font-size: 1.4rem;
+  padding-left: .8rem;
+}
+
+.sidebox > .list {
+  overflow: auto;
+}
+
+body.lab .sidebox {
+  background: #b6d9e1;
+}
+
+body.lab .sidebox > h2 {
+  background: #1b88ab;
+  border-bottom: 6px solid #197593;
+}
+
 
 /*
   `7MM"""YMM                   mm

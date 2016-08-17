@@ -58,7 +58,36 @@
 
 
     <!-- Main content -->
-    <div class="container" ng-view></div>
+    <div class="container">
+      <main class="content" ng-view></main>
+
+      <aside class="sidebar">
+        <div class="sidebox">
+          <h2>Dokument</h2>
+          <div class="list">
+            <ul>
+              <li>Prislista</li>
+              <li>Rörföljd</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sidebox">
+          <h2>Länkar</h2>
+          <div class="list">
+            <ul>
+              <li>Nyheter/Meddelanden</li>
+              <li>Beställ remisser</li>
+              <ul>
+                <li>Karolinska</li>
+                <li>Akademiska sjukhuset</li>
+              </ul>
+            </ul>
+          </div>
+
+        </div>
+      </aside>
+    </div>
 
     <!-- Footer -->
     <div class="footer container">

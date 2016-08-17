@@ -29,4 +29,24 @@
   .detail .table .cell.label {
     width: 14rem;
   }
+
+
+  md-content > .container {
+    display: flex;
+  }
+
+  main {
+    width: 70%;
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  .sidebox {
+  }
+
+  .detail, .list {
+    margin-right: 1rem;
+  }
 }
