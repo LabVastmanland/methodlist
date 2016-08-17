@@ -242,13 +242,14 @@ md-progress-linear {
 }
 
 .detail .cell {
-  /*overflow-x: scroll;*/
+  overflow-x: auto;
 }
 
 .detail .cell.label {
   font-weight: bold;
   padding: 0;
   margin-bottom: .5rem;
+  overflow-x: auto;
   /*width: 7rem;
   hyphens: auto;
   flex-shrink: 0;*/
@@ -355,6 +356,8 @@ body.lab .sidebox > h2 {
   border-top: 6px solid #199379;
   width: 100%;
   min-height: 8rem;
+  display: flex;
+  flex-direction: column;
 }
 
 body.lab .footer {
@@ -364,4 +367,6 @@ body.lab .footer {
 
 .footer p {
   text-align: center;
+  margin: 0;
+  margin-bottom: .5rem;
 }
