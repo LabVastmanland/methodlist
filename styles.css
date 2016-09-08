@@ -81,6 +81,12 @@ a.disabled {
   transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);
 }
 
+.disclaimer {
+  font-size: 1.2rem;
+  color: red;
+  margin-bottom: 1rem;
+}
+
 /*
                                        ,,
   `7MMF'  `7MMF'                     `7MM
@@ -119,6 +125,7 @@ body.lab .header {
 
 
 .subheader {
+  position: relative;
   background: #b6e1d8;
   padding: 30px;
   width: 97%;
