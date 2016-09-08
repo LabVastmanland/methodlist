@@ -21,7 +21,7 @@ angular
       $scope.method = methods.reduce(function(found, method) {
         if (found) {
           return found;
-        } else if (method.ID == $routeParams.id) {
+        } else if (method.__rowNum__ == $routeParams.id) {
           return method;
         }
       }, null);

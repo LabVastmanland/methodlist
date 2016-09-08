@@ -20,7 +20,7 @@ angular
     //TODO: use select instead of location.
     $scope.$watch('selectedItem', function(method) {
       if (method) {
-        $scope.select(method.ID);
+        $scope.select(method.__rowNum__);
       } else {
         $location.path('/');
       }
