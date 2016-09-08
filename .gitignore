@@ -2,3 +2,4 @@ methods_old.js
 *.xlsm
 *.xlsx
 .DS_Store
+!Analyslista.xlsx
