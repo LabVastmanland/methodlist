@@ -69,6 +69,17 @@ a.disabled {
   white-space: pre-line;
 }
 
+.watermark {
+  font-size: 3rem;
+  color: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-transform: uppercase;
+  opacity: .05;
+  font-weight: bold;
+  transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);
+}
 
 /*
                                        ,,
