@@ -44,7 +44,9 @@ angular
           resolve($scope.methods.filter(function (method) {
             try {
               var names = [method.Komponent];
-              names = names.concat(method['Alternativa Sökord'].split(', '));
+              try {
+                names = names.concat(method['Alternativa Sökord'].split(', '));
+              } catch (e) {};
               return names.reduce(function(found, name){
                 return found || name.toLowerCase().indexOf(text.toLowerCase()) != -1;
               }, false);
