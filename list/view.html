@@ -7,7 +7,7 @@
     <h2>&nbsp;{{letter}}&nbsp;</h2>
     <ul class="methodList">
       <li ng-repeat="method in groups[letter]">
-        <a ng-click="select(method.__rowNum__)">{{method.Komponent}}, {{method.System}}</a>
+        <a ng-click="select(method.__rowNum__)">{{ (method.System) ? method.Komponent + ', ' + method.System : method.Komponent}}</a>
       </li>
     </ul>
   </div>
