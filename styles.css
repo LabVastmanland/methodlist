@@ -65,6 +65,10 @@ a.disabled {
   visibility: hidden;
 }
 
+.pre {
+  white-space: pre-line;
+}
+
 
 /*
                                        ,,

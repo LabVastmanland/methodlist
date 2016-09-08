@@ -16,12 +16,12 @@
 
     <li class="row" ng-if="method.Provtagning">
       <div class="cell label">Provtagning</div>
-      <div class="cell">{{method.Provtagning}}</div>
+      <div class="cell pre">{{method.Provtagning}}</div>
     </li>
 
     <li class="row" ng-if="method['Övrigt']">
       <div class="cell label">Övrigt</div>
-      <div class="cell"> {{method['Övrigt']}} </div>
+      <div class="cell pre"> {{method['Övrigt']}} </div>
     </li>
 
     <li class="row" ng-if="method['Remisstext']">
@@ -43,22 +43,22 @@
 
     <li class="row" ng-if="method['Laboratoriet tillhanda']">
       <div class="cell label">Laboratoriet tillhanda</div>
-      <div class="cell">{{method['Laboratoriet tillhanda']}} </div>
+      <div class="cell pre">{{method['Laboratoriet tillhanda']}} </div>
     </li>
 
     <li class="row" ng-if="method.Provhantering && personelType === 'lab'">
       <div class="cell label">Provhantering</div>
-      <div class="cell">{{method.Provhantering}} </div>
+      <div class="cell pre">{{method.Provhantering}} </div>
     </li>
 
     <li class="row" ng-if="method['Förvaring/Hållbarhet'] && personelType === 'lab'">
       <div class="cell label">Förvaring och transport</div>
-      <div class="cell">{{method['Förvaring/Hållbarhet']}} </div>
+      <div class="cell pre ">{{method['Förvaring/Hållbarhet']}} </div>
     </li>
 
     <li class="row" ng-if="method['Skickas till'] && personelType === 'lab'">
       <div class="cell label">Skickas till</div>
-      <div class="cell">{{method['Skickas till']}} </div>
+      <div class="cell pre">{{method['Skickas till']}} </div>
     </li>
 
     <li class="row" ng-if="method['Weblänk'] && personelType === 'lab'">
