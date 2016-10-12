@@ -53,6 +53,11 @@ md-content {
 
 a {
   cursor: pointer;
+   color: #f6558c;
+}
+
+a:hover {
+  color: rgb(194,24,91);
 }
 
 a.disabled {
@@ -164,11 +169,7 @@ a.title:hover {
   height: 40px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-      box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12) !important;
-}
-
-md-progress-linear {
-  display: none;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12) !important;
 }
 
 
