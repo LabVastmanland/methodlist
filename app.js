@@ -7,8 +7,9 @@ angular
     'app.detail'
   ])
   .config(function($locationProvider, $routeProvider) {
-    $routeProvider.otherwise({redirectTo: '/'});
+    $locationProvider.hashPrefix('!');
     // $locationProvider.html5Mode(true);
+    $routeProvider.otherwise({redirectTo: '/'});
   })
   .controller('AppController', function($scope, $q, $location, methods) {
     $scope.personelType = 'health';
@@ -20,7 +21,7 @@ angular
     //TODO: use select instead of location.
     $scope.$watch('selectedItem', function(method) {
       if (method) {
-        $scope.select(method.__rowNum__);
+        $scope.select(method['ID']);
       } else {
         $location.path('/');
       }
