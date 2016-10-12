@@ -18,6 +18,11 @@ angular
         var wb = XLSX.read(bstr, {type:"binary"});
 
         // Convert first sheet to json array
-        return XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+        var methods = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
+
+        // Sort methods by component name.
+        return methods.sort(function (a, b) {
+          return a.Komponent.localeCompare(b.Komponent);
+        })
       });
   });
