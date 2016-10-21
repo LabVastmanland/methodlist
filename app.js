@@ -7,8 +7,8 @@ angular
     'app.detail'
   ])
   .config(function($locationProvider, $routeProvider) {
-    $locationProvider.hashPrefix('!');
-    // $locationProvider.html5Mode(true);
+    //$locationProvider.hashPrefix('!');
+    $locationProvider.html5Mode(true);
     $routeProvider.otherwise({redirectTo: '/'});
   })
   .controller('AppController', function($scope, $q, $location, methods) {
