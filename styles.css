@@ -51,16 +51,20 @@ md-content {
   align-items: center;
 }
 
-a {
+.link {
   cursor: pointer;
    color: #f6558c;
 }
 
-a:hover {
+.link.link--white {
+  color: white;
+}
+
+.link:hover {
   color: rgb(194,24,91);
 }
 
-a.disabled {
+.link.disabled {
   pointer-events: none;
   cursor: default;
   color: #fdc4d7;
@@ -92,7 +96,12 @@ a.disabled {
   font-size: 1.2rem;
   color: red;
   margin-bottom: 1rem;
+
 }
+.disclaimer.disclaimer--subtle {
+  color: black;
+}
+
 
 /*
                                        ,,

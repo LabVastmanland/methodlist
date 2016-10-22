@@ -1,13 +1,13 @@
 <div class="list">
   <ul class="alphabet">
-    <li ng-repeat="letter in alphabet"><a ng-click="goToHash(letter)" ng-class="{disabled: letters.indexOf(letter) == -1}">{{letter}}</a></li>
+    <li ng-repeat="letter in alphabet"><a ng-click="goToHash(letter)" class="link" ng-class="{disabled: letters.indexOf(letter) == -1}">{{letter}}</a></li>
   </ul>
   <!-- List -->
   <div id="{{letter}}" class="letterGroup" ng-repeat="letter in letters | orderBy">
     <h2>&nbsp;{{letter}}&nbsp;</h2>
     <ul class="methodList">
       <li ng-repeat="method in groups[letter]">
-        <a ng-click="select(method['ID'])">{{ (method.System) ? method.Komponent + ', ' + method.System : method.Komponent}}</a>
+        <a class="link" ng-click="select(method['ID'])">{{ (method.System) ? method.Komponent + ', ' + method.System : method.Komponent}}</a>
       </li>
     </ul>
   </div>

@@ -27,7 +27,7 @@
     <li class="row" ng-if="method['Remisstext']">
       <div class="cell label">Remiss</div>
       <div class="cell">
-        <a ng-if="method['Remisslänk']" target="_blank" ng-href="{{method['Remisslänk']}}">{{method['Remisstext']}}</a>
+        <a ng-if="method['Remisslänk']" class="link" target="_blank" ng-href="{{method['Remisslänk']}}">{{method['Remisstext']}}</a>
         <div ng-if="!method['Remisslänk']" class="cell"> {{method['Remisstext']}} </div>
       </div>
     </li>
@@ -64,7 +64,7 @@
     <li class="row" ng-if="method['Weblänk'] && personelType === 'lab'">
       <div class="cell label">Informations&shy;källa</div>
       <div class="cell">
-        <a target="_blank" ng-href="{{method['Weblänk']}}">{{method['Weblänk']}}</a>
+        <a target="_blank" class="link" ng-href="{{method['Weblänk']}}">{{method['Weblänk']}}</a>
       </div>
     </li>
 
