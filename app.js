@@ -3,12 +3,12 @@ angular
     'ngRoute',
     'ngMaterial',
     'app.methods',
-    'app.list',
-    'app.detail'
+    'app.detail',
+    'app.list'
   ])
   .config(function($locationProvider, $routeProvider) {
     //$locationProvider.hashPrefix('!');
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(false);
     $routeProvider.otherwise({redirectTo: '/'});
   })
   .controller('AppController', function($scope, $q, $location, methods) {
