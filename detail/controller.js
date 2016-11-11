@@ -26,8 +26,17 @@ angular
         }
       }, null);
 
-      $scope.print = function () {
-        $window.print();
-      }
     })
+
+    $scope.convertIconName = function (name) {
+      try {
+        return name.match(/[a-zåäö]+/i)[0].toLowerCase();
+      } catch (e) {
+        return name;
+      }
+    }
+
+    $scope.print = function () {
+      $window.print();
+    }
   });

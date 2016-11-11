@@ -358,6 +358,29 @@ a.title:hover {
   background: hsla(195,73%,34%,1);
 }
 
+.hints {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hints li {
+  background: #0aaf8a;
+  display: block;
+  float: right;
+  padding: .2rem;
+}
+
+.hints.lab li{
+  background: #0a8eaf;
+}
+
+
+.hints img {
+  width: 35px;
+  margin-bottom: -.2rem;
+}
+
 /*
                         ,,        ,,
       db                db      `7MM
