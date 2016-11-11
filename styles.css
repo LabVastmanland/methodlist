@@ -92,6 +92,35 @@ md-content {
   z-index: 1000;
 }
 
+
+.disclaimer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  padding: 1.5rem;
+}
+
+.disclaimer__box {
+  background: white;
+  margin: auto;
+  padding: 1rem;
+  border-radius: .5rem;
+  text-align: center;
+}
+
+.disclaimer__box button {
+  float: right;
+}
+
+.disclaimer__box h1 {
+  color: #0aaf8a;
+}
+
+/*
 .disclaimer {
   font-size: 1.2rem;
   color: red;
@@ -101,6 +130,9 @@ md-content {
 .disclaimer.disclaimer--subtle {
   color: black;
 }
+*/
+
+
 
 
 /*

@@ -4,7 +4,8 @@ angular
     'ngMaterial',
     'app.methods',
     'app.detail',
-    'app.list'
+    'app.list',
+    'app.notice'
   ])
   .config(function($locationProvider, $routeProvider) {
     //$locationProvider.hashPrefix('!');
@@ -17,6 +18,12 @@ angular
     methods.then(function (ms) {
       $scope.methods = ms;
     })
+
+    $scope.disclaimer = true;
+
+    $scope.toggleDisclaimer = function(show) {
+      $scope.disclaimer = false;
+    }
 
     //TODO: use select instead of location.
     $scope.$watch('selectedItem', function(method) {
