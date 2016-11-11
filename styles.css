@@ -108,7 +108,7 @@ md-content {
   padding: 1rem;
   border-radius: .5rem;
   text-align: center;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .disclaimer__box button {
