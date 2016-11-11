@@ -1,6 +1,6 @@
 <div class="detail">
   <div class="titleRow">
-    <h2>{{method.Komponent}}, {{method.System}}</h2>
+    <h2>{{ (method.System) ? method.Komponent + ', ' + method.System : method.Komponent}}</h2>
     <h3>{{method.Specialitet}}</h3>
   </div>
 
