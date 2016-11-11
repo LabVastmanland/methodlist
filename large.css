@@ -43,16 +43,6 @@
   }
 }
 
-@media (min-width: 900px) {
-  .disclaimer {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    text-align: right;
-  }
-}
-
-
 @media (min-width: 1000px) {
   .detail .table .cell.label {
     width: 14rem;
