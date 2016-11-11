@@ -14,16 +14,6 @@
       </div>
     </li>
 
-    <li class="row" ng-if="method.Provtagning">
-      <div class="cell label">Provtagning</div>
-      <div class="cell pre">{{method.Provtagning}}</div>
-    </li>
-
-    <li class="row" ng-if="method['Övrigt']">
-      <div class="cell label">Övrigt</div>
-      <div class="cell pre"> {{method['Övrigt']}} </div>
-    </li>
-
     <li class="row" ng-if="method['Remisstext']">
       <div class="cell label">Remiss</div>
       <div class="cell">
@@ -41,9 +31,29 @@
       </div>
     </li>
 
+    <li class="row" ng-if="method['Provtagning/Provtagningsmaterial']">
+      <div class="cell label">Provtagning/Provtagningsmaterial</div>
+      <div class="cell pre">{{method['Provtagning/Provtagningsmaterial']}}</div>
+    </li>
+
+    <li class="row" ng-if="method['Kommentar/Viktigt att veta']">
+      <div class="cell label">Kommentar/Viktigt att veta</div>
+      <div class="cell pre"> {{method['Kommentar/Viktigt att veta']}} </div>
+    </li>
+
     <li class="row" ng-if="method['Laboratoriet tillhanda']">
       <div class="cell label">Laboratoriet tillhanda</div>
       <div class="cell pre">{{method['Laboratoriet tillhanda']}} </div>
+    </li>
+
+    <li class="row" ng-if="method['Lämnas till']">
+      <div class="cell label">Lämnas till</div>
+      <div class="cell pre">{{method['Lämnas till']}} </div>
+    </li>
+
+    <li class="row" ng-if="method['Analyserande laboratorium']">
+      <div class="cell label">Analyserande laboratorium</div>
+      <div class="cell pre">{{method['Analyserande laboratorium']}} </div>
     </li>
 
     <li class="row" ng-if="method.Provhantering && personelType === 'lab'">
@@ -51,9 +61,39 @@
       <div class="cell pre">{{method.Provhantering}} </div>
     </li>
 
-    <li class="row" ng-if="method['Förvaring/Hållbarhet'] && personelType === 'lab'">
-      <div class="cell label">Förvaring och transport</div>
-      <div class="cell pre ">{{method['Förvaring/Hållbarhet']}} </div>
+    <li class="row" ng-if="method['Förvaring, hållbarhet och transport'] && personelType === 'lab'">
+      <div class="cell label">Förvaring, hållbarhet och transport</div>
+      <div class="cell pre ">{{method['Förvaring, hållbarhet och transport']}} </div>
+    </li>
+
+    <li class="row" ng-if="method['Referensintervall']">
+      <div class="cell label">Referensintervall</div>
+      <div class="cell pre">{{method['Referensintervall']}} </div>
+    </li>
+
+    <li class="row" ng-if="method['Metod och analysprincip']">
+      <div class="cell label">Metod och analysprincip</div>
+      <div class="cell pre">{{method['Metod och analysprincip']}} </div>
+    </li>
+
+    <li class="row" ng-if="method['Indikation/Tolkning']">
+      <div class="cell label">Indikation/Tolkning</div>
+      <div class="cell pre">{{method['Indikation/Tolkning']}} </div>
+    </li>
+
+    <li class="row" ng-if="method['Metodansvarig läkare']">
+      <div class="cell label">Metodansvarig läkare</div>
+      <div class="cell pre">{{method['Metodansvarig läkare']}} </div>
+    </li>
+
+    <li class="row" ng-if="method['Ackrediterad']">
+      <div class="cell label">Ackrediterad</div>
+      <div class="cell pre">{{method['Ackrediterad']}} </div>
+    </li>
+
+    <li class="row" ng-if="method['Biobank']">
+      <div class="cell label">Biobank</div>
+      <div class="cell pre">{{method['Biobank']}} </div>
     </li>
 
     <li class="row" ng-if="method['Skickas till'] && personelType === 'lab'">
@@ -61,11 +101,21 @@
       <div class="cell pre">{{method['Skickas till']}} </div>
     </li>
 
-    <li class="row" ng-if="method['Weblänk'] && personelType === 'lab'">
-      <div class="cell label">Informations&shy;källa</div>
+    <li class="row" ng-if="method['Informationskälla'] && personelType === 'lab'">
+      <div class="cell label">Informationskälla</div>
       <div class="cell">
-        <a target="_blank" class="link" ng-href="{{method['Weblänk']}}">{{method['Weblänk']}}</a>
+        <a target="_blank" class="link" ng-href="{{method['Informationskälla']}}">{{method['Informationskälla']}}</a>
       </div>
+    </li>
+
+    <li class="row" ng-if="method['Svarstid']">
+      <div class="cell label">Svarstid</div>
+      <div class="cell pre">{{method['Svarstid']}} </div>
+    </li>
+
+    <li class="row" ng-if="method['Akut/Rutin']">
+      <div class="cell label">Akut/Rutin</div>
+      <div class="cell pre">{{method['Akut/Rutin']}} </div>
     </li>
 
     <li class="row" ng-if="method.Uppdaterad">
