@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module("app.list", ['ngRoute', 'app.methods'])
+  .module("app.list", ['ngRoute', 'app.methods', 'app.spinner'])
 
   .config(function($routeProvider) {
     $routeProvider.when('/', {

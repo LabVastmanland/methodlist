@@ -2,6 +2,9 @@
   <ul class="alphabet">
     <li ng-repeat="letter in alphabet"><a ng-click="goToHash(letter)" class="link" ng-class="{disabled: letters.indexOf(letter) == -1}">{{letter}}</a></li>
   </ul>
+
+  <spinner ng-if="!groups"></spinner>
+
   <!-- List -->
   <div id="{{letter}}" class="letterGroup" ng-repeat="letter in letters | orderBy">
     <h2>&nbsp;{{letter}}&nbsp;</h2>

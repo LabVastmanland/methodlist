@@ -5,7 +5,8 @@ angular
     'app.methods',
     'app.detail',
     'app.list',
-    'app.notice'
+    'app.notice',
+    'app.spinner'
   ])
   .config(function($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');

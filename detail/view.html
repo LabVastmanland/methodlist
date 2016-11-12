@@ -1,10 +1,13 @@
 <div class="detail">
+
+  <spinner ng-if="!method"></spinner>
+
   <div class="titleRow">
     <h2>{{ (method.System) ? method.Komponent + ', ' + method.System : method.Komponent}}</h2>
     <h3>{{method.Specialitet}}</h3>
   </div>
 
-  <ul class="hints" ng-class="{lab: personelType === 'lab'}">
+  <ul class="hints">
     <li ng-if="method['Tid']"><img src="/img/Tid.png" alt=""></li>
     <li ng-if="method['Is']"><img src="/img/Is.png" alt=""></li>
     <li ng-if="method['Mat']"><img src="/img/Mat.png" alt=""></li>
