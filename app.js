@@ -8,7 +8,7 @@ angular
     'app.notice'
   ])
   .config(function($locationProvider, $routeProvider) {
-    //$locationProvider.hashPrefix('!');
+    $locationProvider.hashPrefix('!');
     $locationProvider.html5Mode(false);
     $routeProvider.otherwise({redirectTo: '/'});
   })
@@ -25,12 +25,9 @@ angular
       $scope.disclaimer = false;
     }
 
-    //TODO: use select instead of location.
     $scope.$watch('selectedItem', function(method) {
       if (method) {
         $scope.select(method['ID']);
-      } else {
-        $location.path('/');
       }
     });
 
