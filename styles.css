@@ -461,19 +461,26 @@ a.title:hover {
 }
 
 .hints {
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
+  align-self: flex-end;
+  margin-right: -1rem;
+  padding-left: 1.5rem;
+  background: #0aaf8a;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  padding-right: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
 }
 
 .hints li {
-  background: #0aaf8a;
   display: block;
-  float: right;
   padding: .2rem;
 }
 
-.lab .hints li {
+.lab .hints {
   background: #0a8eaf;
 }
 
