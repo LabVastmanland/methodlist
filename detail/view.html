@@ -8,12 +8,22 @@
   </div>
 
   <ul class="hints">
-    <li ng-if="method['Tid']"><img src="/img/Tid.png" alt=""></li>
-    <li ng-if="method['Is']"><img src="/img/Is.png" alt=""></li>
-    <li ng-if="method['Mat']"><img src="/img/Mat.png" alt=""></li>
-    <li ng-if="method['Ljus']"><img src="/img/Ljus.png" alt=""></li>
+    <li
+      ng-if="method['Rörfärg']"
+      title="Rörfärg"
+      description="Färgen som provröret ska vara."
+      class="tooltip"
+      >
+      <img
+        ng-src="/img/{{convertIconName(method['Rörfärg'])}}.png"
+        alt=""
+        >
+    </li>
     <li ng-if="method['Dos']"><img src="/img/Dos.png" alt=""></li>
-    <li ng-if="method['Rörfärg']"><img ng-src="/img/{{convertIconName(method['Rörfärg'])}}.png" alt=""></li>
+    <li ng-if="method['Ljus']"><img src="/img/Ljus.png" alt=""></li>
+    <li ng-if="method['Mat']"><img src="/img/Mat.png" alt=""></li>
+    <li ng-if="method['Is']"><img src="/img/Is.png" alt=""></li>
+    <li ng-if="method['Tid']"><img src="/img/Tid.png" alt=""></li>
   </ul>
 
   <ul class="table">
