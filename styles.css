@@ -5,8 +5,6 @@
   ASCII-art: (Georgia11) http://www.kammerl.de/ascii/AsciiSignature.php
 */
 
-
-
 /*
 
   .g8"""bgd
@@ -18,18 +16,23 @@ MM.        8M     M8 MM    MM    MM    MM    MM    MM 8M     M8 MM    MM
  `"bmmmd'  `Ybmd9'.JMML  JMML  JMML..JMML  JMML  JMML.`Ybmd9'.JMML  JMML.
 */
 
-
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
   font-size: 18px;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
   background: #0aaf8a;
+}
+
+img {
+  max-width: 100%;
 }
 
 .lab {
@@ -53,7 +56,7 @@ md-content {
 
 .link {
   cursor: pointer;
-   color: #f6558c;
+  color: #f6558c;
 }
 
 .link.link--white {
@@ -61,7 +64,7 @@ md-content {
 }
 
 .link:hover {
-  color: rgb(194,24,91);
+  color: rgb(194, 24, 91);
 }
 
 .link.disabled {
@@ -85,13 +88,12 @@ md-content {
   top: 50%;
   left: 50%;
   text-transform: uppercase;
-  opacity: .05;
+  opacity: 0.05;
   font-weight: bold;
   transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);
   pointer-events: none;
   z-index: 1000;
 }
-
 
 .disclaimer {
   position: fixed;
@@ -99,7 +101,7 @@ md-content {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
   z-index: 1000;
 }
@@ -107,10 +109,10 @@ md-content {
 .disclaimer__box {
   background: white;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   text-align: center;
   overflow: hidden;
-  border: .4rem dotted #0aaf8a;
+  border: 0.4rem dotted #0aaf8a;
 }
 
 .disclaimer__box button {
@@ -133,11 +135,13 @@ md-content {
 }
 */
 
-
 /* bgSpinner */
 .backgroundSpinner {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -175,17 +179,26 @@ md-content {
 }
 
 @-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes sk-bouncedelay {
-  0%, 80%, 100% { 
+  0%,
+  80%,
+  100% {
     -webkit-transform: scale(0);
     transform: scale(0);
-  } 40% { 
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -221,20 +234,28 @@ md-content {
 }
 
 @-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
-}
-
-@keyframes sk-bouncedelay {
-  0%, 80%, 100% { 
+  0%,
+  80%,
+  100% {
     -webkit-transform: scale(0);
-    transform: scale(0);
-  } 40% { 
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
+  }
+  40% {
+    -webkit-transform: scale(1);
   }
 }
 
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 
 /*
                                        ,,
@@ -271,7 +292,9 @@ md-content {
   text-align: center;
 }
 
-
+.header .logo {
+  width: 14rem;
+}
 
 .subheader {
   position: relative;
@@ -293,7 +316,7 @@ a.title {
   text-decoration: none;
 }
 a.title:hover {
-  color: white
+  color: white;
 }
 
 .search {
@@ -311,10 +334,9 @@ a.title:hover {
   height: 40px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12) !important;
 }
-
-
 
 /*
                 ,,
@@ -327,7 +349,6 @@ a.title:hover {
   .JMMmmmmMMM .JMML.M9mmmP'   `Mbmo
 */
 
-
 .list .alphabet {
   display: flex;
   flex-flow: row wrap;
@@ -339,8 +360,8 @@ a.title:hover {
 }
 
 .list .alphabet li {
-  margin-left: .3rem;
-  margin-right: .3rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 .list .alphabet a {
@@ -369,7 +390,7 @@ a.title:hover {
   color: white;
   font-weight: bolder;
   padding: 2px;
-  box-shadow: 0 0 .6rem rgba(68, 68, 68, 0.7);
+  box-shadow: 0 0 0.6rem rgba(68, 68, 68, 0.7);
 }
 
 .list .returnToTop:hover {
@@ -414,7 +435,7 @@ a.title:hover {
 .detail .cell.label {
   font-weight: bold;
   padding: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   overflow-x: auto;
   /*width: 7rem;
   hyphens: auto;
@@ -428,7 +449,7 @@ a.title:hover {
 }
 
 .detail .row:nth-child(odd) {
-  background: #f6f6f6
+  background: #f6f6f6;
 }
 
 .detail .detailList {
@@ -442,22 +463,22 @@ a.title:hover {
   background: #1b88ab;
   width: 3.5rem;
   height: 3.5rem;
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 50%;
-  box-shadow: 0 0 .6rem rgba(68, 68, 68, 0.7);
+  box-shadow: 0 0 0.6rem rgba(68, 68, 68, 0.7);
   cursor: pointer;
   align-self: flex-end;
   margin-top: -2rem;
 }
 
 .detail .print:hover {
-  box-shadow: 0 0 .6rem .1rem rgba(68, 68, 68, 0.7);
-  background: hsla(195,73%,45%,1);
+  box-shadow: 0 0 0.6rem 0.1rem rgba(68, 68, 68, 0.7);
+  background: hsla(195, 73%, 45%, 1);
 }
 
 .detail .print:active {
   box-shadow: none;
-  background: hsla(195,73%,34%,1);
+  background: hsla(195, 73%, 34%, 1);
 }
 
 .hints {
@@ -472,12 +493,13 @@ a.title:hover {
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   padding-right: 1rem;
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 .hints li {
   display: block;
-  padding: .2rem;
+  padding: 0.2rem;
 }
 
 .lab .hints {
@@ -486,7 +508,7 @@ a.title:hover {
 
 .hints img {
   width: 35px;
-  margin-bottom: -.2rem;
+  margin-bottom: -0.2rem;
 }
 
 /*
@@ -503,20 +525,20 @@ a.title:hover {
 .sidebox {
   background: #b6e1d8;
   margin-top: 1.4rem;
-  border-top-left-radius: .4rem;
-  border-top-right-radius: .4rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
 }
 
 .sidebox > h2 {
   background: #0aaf8a;
   color: white;
-  padding: .4rem;
+  padding: 0.4rem;
   border-bottom: 6px solid #199379;
   margin: 0;
-  border-top-left-radius: .4rem;
-  border-top-right-radius: .4rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
   font-size: 1.4rem;
-  padding-left: .8rem;
+  padding-left: 0.8rem;
 }
 
 .sidebox a {
@@ -541,7 +563,6 @@ a.title:hover {
   background: #1b88ab;
   border-bottom: 6px solid #197593;
 }
-
 
 /*
   `7MM"""YMM                   mm
@@ -572,5 +593,5 @@ a.title:hover {
 .footer p {
   text-align: center;
   margin: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
