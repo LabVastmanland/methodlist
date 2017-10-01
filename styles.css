@@ -383,6 +383,7 @@ a.title:hover {
 .list .returnToTop {
   display: block;
   position: fixed;
+  cursor: pointer;
   bottom: 1rem;
   right: 1rem;
   font-size: 1.7rem;
