@@ -94,7 +94,9 @@
 
     <li class="row" ng-if="method['Referensintervall']">
       <div class="cell label">Referensintervall</div>
-      <div class="cell pre">{{method['Referensintervall']}} </div>
+      <div class="cell">
+        <expandable-text text="{{method['Referensintervall']}}"></expandable-text>
+      </div>
     </li>
 
     <li class="row" ng-if="method['Metod och analysprincip']">
