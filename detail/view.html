@@ -57,7 +57,9 @@
 
     <li class="row" ng-if="method['Provtagning/Provtagningsmaterial']">
       <div class="cell label">Provtagning</div>
-      <div class="cell pre">{{method['Provtagning/Provtagningsmaterial']}}</div>
+      <div class="cell">
+        <expandable-text text="{{method['Provtagning/Provtagningsmaterial']}}"></expandable-text>
+      </div>
     </li>
 
     <li class="row" ng-if="method['Kommentar/Viktigt att veta']">
@@ -97,12 +99,16 @@
 
     <li class="row" ng-if="method['Metod och analysprincip']">
       <div class="cell label">Metod och analysprincip</div>
-      <div class="cell pre">{{method['Metod och analysprincip']}} </div>
+      <div class="cell">
+        <expandable-text text="{{method['Metod och analysprincip']}}"></expandable-text>
+      </div>
     </li>
 
     <li class="row" ng-if="method['Indikation/Tolkning']">
       <div class="cell label">Indikation/Tolkning</div>
-      <div class="cell pre">{{method['Indikation/Tolkning']}} </div>
+      <div class="cell">
+        <expandable-text text="{{method['Indikation/Tolkning']}}"></expandable-text>
+      </div>
     </li>
 
     <li class="row" ng-if="method['Metodansvarig läkare']">

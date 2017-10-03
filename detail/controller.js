@@ -39,4 +39,22 @@ angular
     $scope.print = function () {
       $window.print();
     }
+  })
+
+  .directive('expandableText', function() {
+    return {
+      restrict: 'E',
+      scope: {
+        "text": "@"
+      },
+      controller: ['$scope', function ShortenTextController($scope) {
+        $scope.showMore = $scope.text.length < 600
+        $scope.longText = $scope.text.trim()
+        $scope.shortText = $scope.longText.substr(0, 500) + "..."
+        $scope.setShowMore = function (value) {
+          $scope.showMore = value
+        }
+      }],
+      templateUrl: 'detail/expandable-text.html'
+    };
   });
