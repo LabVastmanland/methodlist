@@ -67,7 +67,7 @@
       <div class="cell pre"> {{method['Kommentar/Viktigt att veta']}} </div>
     </li>
 
-    <li class="row" ng-if="method['Laboratoriet tillhanda']">
+    <li class="row" ng-if="method['Laboratoriet tillhanda'] && personelType !== 'lab'">
       <div class="cell label">Laboratoriet tillhanda</div>
       <div class="cell pre">{{method['Laboratoriet tillhanda']}} </div>
     </li>
