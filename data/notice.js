@@ -2,7 +2,7 @@ angular
   .module("app.notice", [])
   .directive('lmvlNotice', function() {
     return {
-        template: '<h1>Välkommen till laboratoriemedicin Västmanlands lista över "skickeprover"</h1> <p>För prover som analyseras i Västmanland hänvisar vi till <a target="_blank" href="https://www.regionvastmanland.se/vardgivare/behandlingsstod/laboratoriemedicin/provtagningsanvisningar/">Laboratoriemedicin Västmanlands nuvarande provtagningssida</a>.<br/>Vid frågor, kommentarer eller förbättringsförslag, vänligen kontakta laboratoriemedicin Västmanland.</p>'
+        template: '<h1>Våra provtagningsanvisningar har flyttat:</h1> <p><a target="_blank" href="https://regionvastmanland.se/vardgivare/behandlingsstod/laboratoriemedicin/provtagning/">hit</a>.<br/>Vid frågor, kommentarer eller förbättringsförslag, vänligen kontakta laboratoriemedicin Västmanland.</p>'
       };
   });
 
